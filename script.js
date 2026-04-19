@@ -148,9 +148,23 @@ if (contactForm) {
     }
 
     if (isValid) {
-      contactForm.style.display = 'none';
-      const success = document.getElementById('formSuccess');
-      if (success) success.style.display = 'block';
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          const success = document.getElementById('formSuccess');
+          if (success) success.style.display = 'block';
+        } else {
+          alert('Hubo un error al enviar el formulario. Intentá de nuevo.');
+        }
+      })
+      .catch(() => {
+        alert('No se pudo conectar. Revisá tu conexión e intentá de nuevo.');
+      });
     }
   });
 }

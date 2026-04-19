@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unirme — VoyConVos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO CON NAVBAR FIJA -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">VoyConVos</div>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="viajes.html">Viajes</a></li>
+        <li><a href="contacto.html">Unirme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ENCABEZADO DE PÁGINA -->
+    <section class="page-header">
+      <h1>Unirme a VoyConVos</h1>
+      <p>Completá el formulario y te contactamos para sumarte a la red</p>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="contact-section">
+
+      <!-- Mensaje de éxito (oculto hasta que se envíe el formulario) -->
+      <div class="form-success" id="formSuccess">
+        <strong>¡Gracias por sumarte! 🎉</strong>
+        Recibimos tu información. Pronto nos comunicaremos con vos para confirmar tu participación en la red VoyConVos.
+        <a href="index.html" class="btn btn--primary" style="display:inline-block; margin-top:1.5rem;">Volver al inicio</a>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+
+        <!-- DATOS PERSONALES -->
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej: María González"
+              required
+              autofocus
+            >
+            <span class="field-error" id="nombreError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ejemplo@correo.com"
+              required
+            >
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono / WhatsApp</label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="Ej: 1155667788"
+              pattern="[\d\s]{7,15}"
+              required
+            >
+            <span class="field-error" id="telefonoError"></span>
+          </div>
+        </fieldset>
+
+        <!-- ROL EN LA RED -->
+        <fieldset>
+          <legend>Mi participación</legend>
+
+          <div class="form-group">
+            <label>¿Cómo querés participar?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="rol" value="pasajero"> Soy pasajero/a
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="rol" value="conductor"> Tengo auto y ofrezco lugar
+              </label>
+            </div>
+            <span class="field-error" id="rolError"></span>
+          </div>
+
+          <!-- Campos adicionales para conductores (se muestran con JS) -->
+          <div class="conductor-fields" id="conductorFields">
+            <div class="form-group">
+              <label for="asientos">Asientos disponibles</label>
+              <input
+                type="number"
+                id="asientos"
+                name="asientos"
+                min="1"
+                max="6"
+                placeholder="Ej: 3"
+              >
+            </div>
+            <div class="form-group">
+              <label for="vehiculo">Descripción del vehículo</label>
+              <input
+                type="text"
+                id="vehiculo"
+                name="vehiculo"
+                placeholder="Ej: Volkswagen Suran blanco"
+              >
+            </div>
+          </div>
+
+        </fieldset>
+
+        <!-- DETALLES DEL VIAJE -->
+        <fieldset>
+          <legend>Detalles del viaje</legend>
+
+          <div class="form-group">
+            <label for="destino">Destino</label>
+            <select id="destino" name="destino" required>
+              <option value="">-- Seleccioná un destino --</option>
+              <option value="mardelplata">Mar del Plata</option>
+              <option value="pinamar">Pinamar</option>
+              <option value="miramar">Miramar</option>
+              <option value="necochea">Necochea</option>
+              <option value="villagesell">Villa Gesell</option>
+              <option value="mardelaspampas">Mar de las Pampas</option>
+              <option value="otro">Otro</option>
+            </select>
+            <span class="field-error" id="destinoError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="fecha">Fecha tentativa del viaje</label>
+            <input
+              type="date"
+              id="fecha"
+              name="fecha"
+              required
+            >
+            <span class="field-error" id="fechaError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Comentarios adicionales</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              placeholder="Contanos algo más sobre tu viaje, punto de encuentro, horario, etc."
+              required
+            ></textarea>
+            <span class="field-error" id="mensajeError"></span>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="form__submit">Enviar solicitud</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="footer__content">
+      <p>&copy; 2026 VoyConVos — Proyecto sin fines de lucro</p>
+      <nav class="footer__links">
+        <a href="index.html">Inicio</a>
+        <a href="viajes.html">Viajes</a>
+        <a href="contacto.html">Unirme</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

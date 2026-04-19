@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoyConVos — Compartí el Camino</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO CON NAVBAR FIJA -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">VoyConVos</div>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="viajes.html">Viajes</a></li>
+        <li><a href="contacto.html">Unirme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1>Compartí el camino a la costa</h1>
+        <p>
+          Conectamos viajeros que necesitan llegar con conductores que tienen lugar.
+          Sin fines de lucro. Solo solidaridad y ahorro.
+        </p>
+        <div class="hero__buttons">
+          <a href="viajes.html" class="btn btn--primary">Ver viajes disponibles</a>
+          <a href="contacto.html" class="btn btn--secondary">Ofrecé tu auto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="how-it-works">
+      <h2>¿Cómo funciona?</h2>
+      <div class="steps">
+
+        <article class="step">
+          <div class="step__number">1</div>
+          <h3>Buscás tu viaje</h3>
+          <p>Explorá los viajes disponibles hacia tu destino en la costa y elegí el que más te convenga.</p>
+        </article>
+
+        <article class="step">
+          <div class="step__number">2</div>
+          <h3>Te conectás</h3>
+          <p>Contactás al conductor directamente, coordinan punto de encuentro y los detalles del viaje.</p>
+        </article>
+
+        <article class="step">
+          <div class="step__number">3</div>
+          <h3>Viajás y ahorrás</h3>
+          <p>Compartís los gastos de combustible y peajes. Todos ganan: vos llegás, el conductor recupera costos.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BENEFICIOS  (CSS Grid) -->
+    <section class="benefits">
+      <h2>¿Por qué VoyConVos?</h2>
+      <div class="benefits__grid">
+
+        <div class="benefit-card">
+          <div class="benefit-card__icon">💰</div>
+          <h3>Económico</h3>
+          <p>Reducí el costo de tu viaje compartiendo gastos de combustible y peajes entre todos.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🌿</div>
+          <h3>Sustentable</h3>
+          <p>Menos autos en la ruta significa menor emisión de CO₂ y menos congestión en los accesos.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🤝</div>
+          <h3>Solidario</h3>
+          <p>Construimos una comunidad de viajeros que se ayudan mutuamente para llegar a la costa.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🆓</div>
+          <h3>Sin fines de lucro</h3>
+          <p>La plataforma es completamente gratuita. No cobramos comisión ni intermediamos dinero.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="footer__content">
+      <p>&copy; 2026 VoyConVos — Proyecto sin fines de lucro</p>
+      <nav class="footer__links">
+        <a href="index.html">Inicio</a>
+        <a href="viajes.html">Viajes</a>
+        <a href="contacto.html">Unirme</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

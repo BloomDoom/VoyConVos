@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajes Disponibles — VoyConVos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO CON NAVBAR FIJA -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar__logo">VoyConVos</div>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="viajes.html">Viajes</a></li>
+        <li><a href="contacto.html">Unirme</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ENCABEZADO DE PÁGINA -->
+    <section class="page-header">
+      <h1>Viajes disponibles</h1>
+      <p>Encontrá tu viaje a la costa y sumarte a la red</p>
+    </section>
+
+    <!-- FILTROS POR DESTINO -->
+    <section class="trips-filter">
+      <div class="filter__buttons">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="mardelplata">Mar del Plata</button>
+        <button class="filter-btn" data-filter="pinamar">Pinamar</button>
+        <button class="filter-btn" data-filter="miramar">Miramar</button>
+        <button class="filter-btn" data-filter="necochea">Necochea</button>
+        <button class="filter-btn" data-filter="villagesell">Villa Gesell</button>
+        <button class="filter-btn" data-filter="mardelaspampas">Mar de las Pampas</button>
+      </div>
+    </section>
+
+    <!-- GRILLA DE TARJETAS  (CSS Grid) -->
+    <section class="trips-section">
+      <div class="trips-grid">
+
+        <!-- Tarjeta 1 -->
+        <article class="trip-card" data-destination="mardelplata">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Mar del Plata</span>
+            <span class="trip-card__date">25 Abr</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">Buenos Aires → Mar del Plata</p>
+            <ul class="trip-card__details">
+              <li>Salida: 07:00 hs desde Constitución</li>
+              <li>Asientos disponibles: 3</li>
+              <li>Aporte: $5.000 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Juan M.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="trip-card" data-destination="pinamar">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Pinamar</span>
+            <span class="trip-card__date">26 Abr</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">Buenos Aires → Pinamar</p>
+            <ul class="trip-card__details">
+              <li>Salida: 06:30 hs desde Palermo</li>
+              <li>Asientos disponibles: 2</li>
+              <li>Aporte: $6.500 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Carla S.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="trip-card" data-destination="miramar">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Miramar</span>
+            <span class="trip-card__date">27 Abr</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">La Plata → Miramar</p>
+            <ul class="trip-card__details">
+              <li>Salida: 08:00 hs desde La Plata centro</li>
+              <li>Asientos disponibles: 1</li>
+              <li>Aporte: $4.000 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Rodrigo P.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 4 -->
+        <article class="trip-card" data-destination="mardelplata">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Mar del Plata</span>
+            <span class="trip-card__date">1 May</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">Buenos Aires → Mar del Plata</p>
+            <ul class="trip-card__details">
+              <li>Salida: 09:00 hs desde Liniers</li>
+              <li>Asientos disponibles: 2</li>
+              <li>Aporte: $5.500 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Ana L.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 5 -->
+        <article class="trip-card" data-destination="pinamar">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Pinamar</span>
+            <span class="trip-card__date">2 May</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">Buenos Aires → Pinamar</p>
+            <ul class="trip-card__details">
+              <li>Salida: 07:30 hs desde Microcentro</li>
+              <li>Asientos disponibles: 3</li>
+              <li>Aporte: $6.000 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Martín G.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 6 -->
+        <article class="trip-card" data-destination="necochea">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Necochea</span>
+            <span class="trip-card__date">3 May</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">Buenos Aires → Necochea</p>
+            <ul class="trip-card__details">
+              <li>Salida: 06:00 hs desde Retiro</li>
+              <li>Asientos disponibles: 2</li>
+              <li>Aporte: $7.000 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Sofía R.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 7 -->
+        <article class="trip-card" data-destination="villagesell">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Villa Gesell</span>
+            <span class="trip-card__date">4 May</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">Buenos Aires → Villa Gesell</p>
+            <ul class="trip-card__details">
+              <li>Salida: 07:00 hs desde Once</li>
+              <li>Asientos disponibles: 2</li>
+              <li>Aporte: $6.800 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Lucas F.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Tarjeta 8 -->
+        <article class="trip-card" data-destination="mardelaspampas">
+          <div class="trip-card__top">
+            <span class="trip-card__destination">Mar de las Pampas</span>
+            <span class="trip-card__date">5 May</span>
+          </div>
+          <div class="trip-card__body">
+            <p class="trip-card__route">Buenos Aires → Mar de las Pampas</p>
+            <ul class="trip-card__details">
+              <li>Salida: 08:30 hs desde Belgrano</li>
+              <li>Asientos disponibles: 3</li>
+              <li>Aporte: $7.200 por persona</li>
+            </ul>
+          </div>
+          <div class="trip-card__footer">
+            <span class="trip-card__driver">Valentina R.</span>
+            <a href="contacto.html" class="btn btn--small">Contactar</a>
+          </div>
+        </article>
+
+        <!-- Mensaje sin resultados (oculto por defecto) -->
+        <p class="no-results">No hay viajes disponibles para este destino por el momento.</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="footer__content">
+      <p>&copy; 2026 VoyConVos — Proyecto sin fines de lucro</p>
+      <nav class="footer__links">
+        <a href="index.html">Inicio</a>
+        <a href="viajes.html">Viajes</a>
+        <a href="contacto.html">Unirme</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

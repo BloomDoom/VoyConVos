@@ -204,7 +204,7 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.3rem); }
    ============================================================ */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  background: linear-gradient(135deg, rgba(0, 119, 182, 0.88) 0%, rgba(0, 180, 216, 0.88) 100%), center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,6 +305,32 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.3rem); }
 .step h3 {
   color: var(--color-primary);
   margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   BANNER INTERMEDIO
+   ============================================================ */
+.banner-intermedio {
+  background: url('viajando_con_amigos.png') center / cover no-repeat;
+  position: relative;
+}
+
+.banner-intermedio__overlay {
+  background: rgba(0, 119, 182, 0.75);
+  padding: 5rem 5%;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.banner-intermedio__overlay h2 {
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.banner-intermedio__overlay p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  margin-bottom: 2rem;
 }
 
 /* ============================================================
@@ -533,6 +559,89 @@ h3 { font-size: clamp(1rem, 2.5vw, 1.3rem); }
   color: var(--color-text-light);
   grid-column: 1 / -1;
   font-size: 1.1rem;
+}
+
+/* ============================================================
+   SELECTOR DE ROL — TARJETAS
+   ============================================================ */
+.role-selector {
+  margin-bottom: 1.5rem;
+}
+
+.role-selector__label {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.role-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.5rem 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  background-color: var(--color-bg);
+  cursor: pointer;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  text-align: center;
+}
+
+.role-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.role-card.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.role-card.selected .role-card__title {
+  color: var(--color-primary);
+}
+
+.role-card__icon {
+  font-size: 2.2rem;
+}
+
+.role-card__title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: color var(--transition);
+}
+
+.role-card__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* Secciones del form ocultas hasta que se elija rol */
+.role-section {
+  display: none;
+}
+
+.role-section.visible {
+  display: block;
+}
+
+#submitBtn {
+  display: none;
+}
+
+#submitBtn.visible {
+  display: block;
 }
 
 /* ============================================================

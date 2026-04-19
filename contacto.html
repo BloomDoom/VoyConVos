@@ -32,14 +32,17 @@
     <!-- FORMULARIO DE CONTACTO -->
     <section class="contact-section">
 
-      <!-- Mensaje de éxito (oculto hasta que se envíe el formulario) -->
+      <!-- Mensaje de éxito -->
       <div class="form-success" id="formSuccess">
         <strong>¡Gracias por sumarte! 🎉</strong>
         Recibimos tu información. Pronto nos comunicaremos con vos para confirmar tu participación en la red VoyConVos.
-        <a href="index.html" class="btn btn--primary" style="display:inline-block; margin-top:1.5rem;">Volver al inicio</a>
+        <a href="index.html" class="btn btn--primary" style="display:block; width:fit-content; margin: 1.5rem auto 0;">Volver al inicio</a>
       </div>
 
       <form class="contact-form" id="contactForm" action="https://formspree.io/f/mpqkrjop" method="POST" novalidate>
+
+        <!-- Campo oculto que guarda el rol seleccionado -->
+        <input type="hidden" id="rolHidden" name="rol" value="">
 
         <!-- DATOS PERSONALES -->
         <fieldset>
@@ -84,55 +87,89 @@
           </div>
         </fieldset>
 
-        <!-- ROL EN LA RED -->
-        <fieldset>
-          <legend>Mi participación</legend>
+        <!-- SELECTOR DE ROL -->
+        <div class="role-selector">
+          <p class="role-selector__label">¿Cómo querés participar?</p>
+          <div class="role-cards">
+
+            <button type="button" class="role-card" id="cardPasajero" data-rol="pasajero">
+              <span class="role-card__icon">🧳</span>
+              <span class="role-card__title">Soy pasajero/a</span>
+              <span class="role-card__desc">Busco lugar en un auto hacia la costa</span>
+            </button>
+
+            <button type="button" class="role-card" id="cardConductor" data-rol="conductor">
+              <span class="role-card__icon">🚗</span>
+              <span class="role-card__title">Ofrezco mi auto</span>
+              <span class="role-card__desc">Tengo lugar disponible en mi vehículo</span>
+            </button>
+
+          </div>
+          <span class="field-error" id="rolError"></span>
+        </div>
+
+        <!-- CAMPOS ESPECÍFICOS DE PASAJERO (ocultos por defecto) -->
+        <fieldset class="role-section" id="pasajeroSection">
+          <legend>Como pasajero/a</legend>
 
           <div class="form-group">
-            <label>¿Cómo querés participar?</label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="rol" value="pasajero"> Soy pasajero/a
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="rol" value="conductor"> Tengo auto y ofrezco lugar
-              </label>
-            </div>
-            <span class="field-error" id="rolError"></span>
+            <label for="cantPasajeros">¿Cuántos viajan?</label>
+            <input
+              type="number"
+              id="cantPasajeros"
+              name="cant_pasajeros"
+              min="1"
+              max="6"
+              placeholder="Ej: 2"
+            >
           </div>
-
-          <!-- Campos adicionales para conductores (se muestran con JS) -->
-          <div class="conductor-fields" id="conductorFields">
-            <div class="form-group">
-              <label for="asientos">Asientos disponibles</label>
-              <input
-                type="number"
-                id="asientos"
-                name="asientos"
-                min="1"
-                max="6"
-                placeholder="Ej: 3"
-              >
-            </div>
-            <div class="form-group">
-              <label for="vehiculo">Descripción del vehículo</label>
-              <input
-                type="text"
-                id="vehiculo"
-                name="vehiculo"
-                placeholder="Ej: Volkswagen Suran blanco"
-              >
-            </div>
-          </div>
-
         </fieldset>
 
-        <!-- DETALLES DEL VIAJE -->
-        <fieldset>
+        <!-- CAMPOS ESPECÍFICOS DE CONDUCTOR (ocultos por defecto) -->
+        <fieldset class="role-section" id="conductorSection">
+          <legend>Como conductor/a</legend>
+
+          <div class="form-group">
+            <label for="asientos">Asientos disponibles</label>
+            <input
+              type="number"
+              id="asientos"
+              name="asientos"
+              min="1"
+              max="6"
+              placeholder="Ej: 3"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="vehiculo">Descripción del vehículo</label>
+            <input
+              type="text"
+              id="vehiculo"
+              name="vehiculo"
+              placeholder="Ej: Volkswagen Suran blanco"
+            >
+          </div>
+        </fieldset>
+
+        <!-- DETALLES DEL VIAJE (ocultos hasta elegir rol) -->
+        <fieldset class="role-section" id="viajeSection">
           <legend>Detalles del viaje</legend>
 
           <div class="form-group">
-            <label for="destino">Destino</label>
+            <label for="origen">¿Desde dónde salís?</label>
+            <input
+              type="text"
+              id="origen"
+              name="origen"
+              placeholder="Ej: Buenos Aires - Palermo"
+              required
+            >
+            <span class="field-error" id="origenError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="destino">¿A dónde vas?</label>
             <select id="destino" name="destino" required>
               <option value="">-- Seleccioná un destino --</option>
               <option value="mardelplata">Mar del Plata</option>
@@ -163,14 +200,14 @@
               id="mensaje"
               name="mensaje"
               rows="4"
-              placeholder="Contanos algo más sobre tu viaje, punto de encuentro, horario, etc."
+              placeholder="Contanos algo más: horario preferido, punto de encuentro, etc."
               required
             ></textarea>
             <span class="field-error" id="mensajeError"></span>
           </div>
         </fieldset>
 
-        <button type="submit" class="form__submit">Enviar solicitud</button>
+        <button type="submit" class="form__submit" id="submitBtn">Enviar solicitud</button>
 
       </form>
     </section>

@@ -57,19 +57,37 @@ if (filterBtns.length > 0) {
 }
 
 /* ============================================================
-   FORMULARIO — MOSTRAR CAMPOS DE CONDUCTOR
+   FORMULARIO — SELECTOR DE ROL (TARJETAS)
    ============================================================ */
-const rolRadios       = document.querySelectorAll('input[name="rol"]');
-const conductorFields = document.getElementById('conductorFields');
+const roleCards       = document.querySelectorAll('.role-card');
+const rolHidden       = document.getElementById('rolHidden');
+const pasajeroSection = document.getElementById('pasajeroSection');
+const conductorSection= document.getElementById('conductorSection');
+const viajeSection    = document.getElementById('viajeSection');
+const submitBtn       = document.getElementById('submitBtn');
 
-if (rolRadios.length > 0 && conductorFields) {
-  rolRadios.forEach(radio => {
-    radio.addEventListener('change', () => {
-      if (radio.value === 'conductor') {
-        conductorFields.classList.add('visible');
+if (roleCards.length > 0) {
+  roleCards.forEach(card => {
+    card.addEventListener('click', () => {
+      roleCards.forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+
+      const rol = card.dataset.rol;
+      rolHidden.value = rol;
+
+      if (rol === 'pasajero') {
+        pasajeroSection.classList.add('visible');
+        conductorSection.classList.remove('visible');
       } else {
-        conductorFields.classList.remove('visible');
+        conductorSection.classList.add('visible');
+        pasajeroSection.classList.remove('visible');
       }
+
+      viajeSection.classList.add('visible');
+      submitBtn.classList.add('visible');
+
+      const rolError = document.getElementById('rolError');
+      if (rolError) rolError.textContent = '';
     });
   });
 }
@@ -97,6 +115,11 @@ if (contactForm) {
       validate: val => /^\d{7,15}$/.test(val.replace(/\s/g, '')) ? '' : 'Ingresá un teléfono válido (solo números).'
     },
     {
+      el: document.getElementById('origen'),
+      error: document.getElementById('origenError'),
+      validate: val => val.trim().length >= 2 ? '' : 'Ingresá tu punto de partida.'
+    },
+    {
       el: document.getElementById('destino'),
       error: document.getElementById('destinoError'),
       validate: val => val !== '' ? '' : 'Seleccioná un destino.'
@@ -113,7 +136,7 @@ if (contactForm) {
     }
   ];
 
-  /* Validación en tiempo real al escribir */
+  /* Validación en tiempo real */
   fields.forEach(({ el, error, validate }) => {
     if (!el) return;
     el.addEventListener('input', () => {
@@ -129,23 +152,25 @@ if (contactForm) {
 
     let isValid = true;
 
+    /* Validar rol */
+    const rolError = document.getElementById('rolError');
+    if (!rolHidden || rolHidden.value === '') {
+      rolError.textContent = 'Seleccioná si sos pasajero/a o conductor/a.';
+      isValid = false;
+    } else {
+      rolError.textContent = '';
+    }
+
+    /* Validar campos comunes y del viaje (solo si ya se mostró la sección) */
     fields.forEach(({ el, error, validate }) => {
       if (!el) return;
+      const section = el.closest('.role-section');
+      if (section && !section.classList.contains('visible')) return;
       const msg = validate(el.value);
       error.textContent = msg;
       el.classList.toggle('invalid', msg !== '');
       if (msg !== '') isValid = false;
     });
-
-    /* Validar que se haya elegido un rol */
-    const rolSeleccionado = document.querySelector('input[name="rol"]:checked');
-    const rolError = document.getElementById('rolError');
-    if (!rolSeleccionado) {
-      rolError.textContent = 'Seleccioná si sos pasajero o conductor.';
-      isValid = false;
-    } else {
-      rolError.textContent = '';
-    }
 
     if (isValid) {
       fetch(contactForm.action, {

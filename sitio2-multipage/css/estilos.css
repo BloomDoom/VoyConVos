@@ -291,6 +291,22 @@ main { min-height: 60vh; }
 }
 
 /* ============================================================
+   ESTADO VACÍO (plataforma recién lanzada)
+   ============================================================ */
+.estado-vacio {
+  max-width: 620px;
+  background: var(--color-arena);
+  border: 1px solid #e3ecf5;
+  border-radius: var(--radio);
+  padding: 3rem 2rem;
+  box-shadow: var(--sombra);
+}
+.estado-vacio__icono {
+  font-size: 3.4rem;
+  color: var(--color-oceano);
+}
+
+/* ============================================================
    PULIDO VISUAL v2 — capa aditiva
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {

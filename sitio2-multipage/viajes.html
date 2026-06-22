@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viajes disponibles — VoyConVos | Carpooling a la costa</title>
-  <meta name="description" content="Encontrá viajes compartidos disponibles hacia Mar del Plata, Pinamar, Villa Gesell y toda la costa argentina. Filtrá por destino y sumate.">
+  <title>Viajes a la costa — VoyConVos | Carpooling solidario</title>
+  <meta name="description" content="VoyConVos está dando sus primeros pasos. Ofrecé los asientos libres de tu auto o pedí un viaje a la costa argentina y sumate a la red de carpooling.">
   <meta name="author" content="VoyConVos">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
@@ -40,154 +40,54 @@
   <main>
     <section class="encabezado-pagina">
       <div class="container">
-        <h1>Viajes disponibles</h1>
-        <p>Encontrá tu viaje a la costa y sumate a la red. Filtrá por destino.</p>
+        <h1>Viajes a la costa</h1>
+        <p>Compartí los asientos libres de tu auto o pedí un viaje. Así funciona VoyConVos.</p>
       </div>
     </section>
 
     <section class="py-5">
       <div class="container">
-        <!-- Filtros (interacción JS) -->
-        <div class="filtros-destino mb-4" data-aos="fade-up">
-          <button class="filtro-btn activo" data-filtro="todos">Todos</button>
-          <button class="filtro-btn" data-filtro="mardelplata">Mar del Plata</button>
-          <button class="filtro-btn" data-filtro="pinamar">Pinamar</button>
-          <button class="filtro-btn" data-filtro="villagesell">Villa Gesell</button>
-          <button class="filtro-btn" data-filtro="miramar">Miramar</button>
-          <button class="filtro-btn" data-filtro="necochea">Necochea</button>
+        <!-- Estado honesto: plataforma recién lanzada -->
+        <div class="estado-vacio text-center mx-auto" data-aos="fade-up">
+          <i class="bi bi-signpost-2 estado-vacio__icono"></i>
+          <h2 class="h3 fw-bold mt-3">Todavía no hay viajes publicados</h2>
+          <p class="text-muted">
+            VoyConVos está dando sus primeros pasos. Aún no hay viajes cargados,
+            pero podés ser de los primeros: ofrecé los asientos libres de tu auto
+            o contanos a dónde querés viajar y te avisamos cuando haya cupo disponible.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+            <a href="contacto.html" class="btn btn--cta"><i class="bi bi-car-front"></i> Ofrecer un viaje</a>
+            <a href="contacto.html" class="btn btn-outline-primary"><i class="bi bi-search"></i> Buscar un viaje</a>
+          </div>
         </div>
 
+        <!-- Cómo se publica un viaje -->
+        <h2 class="text-center fw-bold mt-5 mb-2" data-aos="fade-up">¿Cómo se comparte un viaje?</h2>
+        <p class="text-center text-muted mb-5" data-aos="fade-up">Tres pasos simples para empezar</p>
         <div class="row g-4">
-          <!-- Viaje 1 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="mardelplata" data-aos="fade-up">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Mar del Plata</span><span class="tarjeta-viaje__fecha">3 Ene</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">Buenos Aires → Mar del Plata</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 07:00 desde Constitución</li>
-                  <li><i class="bi bi-people"></i> 3 asientos disponibles</li>
-                  <li><i class="bi bi-car-front"></i> Chevrolet Onix gris</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $30.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Juan M.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">1</span>
+              <h3 class="h5 mt-3">Publicás tu viaje</h3>
+              <p class="text-muted mb-0">Indicás origen, destino, fecha y cuántos asientos tenés libres en el auto.</p>
+            </div>
           </div>
-          <!-- Viaje 2 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="pinamar" data-aos="fade-up" data-aos-delay="100">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Pinamar</span><span class="tarjeta-viaje__fecha">10 Ene</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">La Plata → Pinamar</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 06:30 desde La Plata centro</li>
-                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
-                  <li><i class="bi bi-car-front"></i> Ford Ka rojo</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $25.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Carla S.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">2</span>
+              <h3 class="h5 mt-3">Te contactan</h3>
+              <p class="text-muted mb-0">Los pasajeros interesados se comunican y coordinan el punto de encuentro.</p>
+            </div>
           </div>
-          <!-- Viaje 3 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="miramar" data-aos="fade-up" data-aos-delay="200">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Miramar</span><span class="tarjeta-viaje__fecha">17 Ene</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">La Plata → Miramar</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 08:00 desde La Plata centro</li>
-                  <li><i class="bi bi-people"></i> 1 asiento disponible</li>
-                  <li><i class="bi bi-car-front"></i> Volkswagen Gol blanco</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $29.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Rodrigo P.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
-          </div>
-          <!-- Viaje 4 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="mardelplata" data-aos="fade-up">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Mar del Plata</span><span class="tarjeta-viaje__fecha">24 Ene</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">Rosario → Mar del Plata</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 07:00 desde Rosario centro</li>
-                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
-                  <li><i class="bi bi-car-front"></i> Renault Kangoo azul</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $50.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Ana L.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
-          </div>
-          <!-- Viaje 5 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="pinamar" data-aos="fade-up" data-aos-delay="100">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Pinamar</span><span class="tarjeta-viaje__fecha">31 Ene</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">Mar del Plata → Pinamar</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 09:00 desde Mar del Plata</li>
-                  <li><i class="bi bi-people"></i> 3 asientos disponibles</li>
-                  <li><i class="bi bi-car-front"></i> Toyota Corolla negro</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $9.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Martín G.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
-          </div>
-          <!-- Viaje 6 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="necochea" data-aos="fade-up" data-aos-delay="200">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Necochea</span><span class="tarjeta-viaje__fecha">7 Feb</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">Bahía Blanca → Necochea</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 08:00 desde Bahía Blanca</li>
-                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
-                  <li><i class="bi bi-car-front"></i> Peugeot 208 blanco</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $10.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Sofía R.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
-          </div>
-          <!-- Viaje 7 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="villagesell" data-aos="fade-up">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Villa Gesell</span><span class="tarjeta-viaje__fecha">14 Feb</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">Mar del Plata → Villa Gesell</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 10:00 desde Mar del Plata</li>
-                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
-                  <li><i class="bi bi-car-front"></i> Honda City plata</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $8.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Lucas F.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
-          </div>
-          <!-- Viaje 8 -->
-          <div class="col-md-6 col-lg-4 col-viaje" data-destino="villagesell" data-aos="fade-up" data-aos-delay="100">
-            <article class="tarjeta-viaje">
-              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Villa Gesell</span><span class="tarjeta-viaje__fecha">21 Feb</span></div>
-              <div class="tarjeta-viaje__body">
-                <p class="tarjeta-viaje__ruta">Buenos Aires → Villa Gesell</p>
-                <ul class="tarjeta-viaje__detalles">
-                  <li><i class="bi bi-clock"></i> Salida 06:00 desde Liniers</li>
-                  <li><i class="bi bi-people"></i> 3 asientos disponibles</li>
-                  <li><i class="bi bi-car-front"></i> Fiat Cronos rojo</li>
-                  <li><i class="bi bi-cash-coin"></i> Aporte $28.000 por persona</li>
-                </ul>
-              </div>
-              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Valentina R.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
-            </article>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">3</span>
+              <h3 class="h5 mt-3">Viajan juntos</h3>
+              <p class="text-muted mb-0">Comparten el camino y los gastos del viaje. Más económico y en compañía.</p>
+            </div>
           </div>
         </div>
-        <p class="text-center text-muted mt-4 sin-resultados" hidden>No hay viajes disponibles para este destino por el momento.</p>
       </div>
     </section>
   </main>

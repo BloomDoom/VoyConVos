@@ -297,3 +297,120 @@ section { scroll-margin-top: 70px; }
   .hero-seccion .contador { font-size: 1.7rem; }
   .tarjeta-galeria img { height: 220px; }
 }
+
+/* ============================================================
+   PULIDO VISUAL v2 — capa aditiva (no toca lo anterior)
+   ============================================================ */
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Foco visible accesible y con identidad de marca */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 2px;
+}
+
+/* --- Títulos de sección con gradiente + subrayado decorativo --- */
+main section h2 {
+  background: linear-gradient(120deg, var(--color-oceano), var(--color-coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+main section h2.text-center::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: .8rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(120deg, var(--color-oceano), var(--color-coral));
+}
+
+/* --- Hero: overlay con leve movimiento y tinte coral --- */
+.hero-seccion__overlay {
+  background: linear-gradient(160deg, rgba(11,37,69,.85), rgba(10,110,189,.5), rgba(255,122,89,.22));
+  background-size: 200% 200%;
+  animation: heroGradient 16s ease infinite;
+}
+@keyframes heroGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* --- Hero: indicador "scroll" animado --- */
+.hero-scroll {
+  position: absolute;
+  left: 50%; bottom: 1.6rem;
+  transform: translateX(-50%);
+  width: 46px; height: 46px;
+  display: grid; place-items: center;
+  color: #fff; font-size: 1.4rem;
+  border: 2px solid rgba(255,255,255,.6);
+  border-radius: 50%;
+  z-index: 3;
+  text-decoration: none;
+  animation: heroBounce 1.8s ease-in-out infinite;
+  transition: var(--transicion);
+}
+.hero-scroll:hover,
+.hero-scroll:focus-visible {
+  background: var(--color-coral);
+  border-color: var(--color-coral);
+  color: #fff;
+}
+@keyframes heroBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%      { transform: translateX(-50%) translateY(9px); }
+}
+
+/* --- Botón CTA: brillo al pasar el mouse --- */
+.btn--cta { position: relative; overflow: hidden; }
+.btn--cta::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -130%;
+  width: 60%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.45), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+}
+.btn--cta:hover::after { left: 150%; }
+
+/* --- Tarjetas: glow de color en hover --- */
+.tarjeta-paso,
+.tarjeta-beneficio,
+.tarjeta-destino { transition: transform var(--transicion), box-shadow var(--transicion); }
+.tarjeta-paso:hover      { box-shadow: 0 18px 42px rgba(10,110,189,.22); }
+.tarjeta-beneficio:hover { box-shadow: 0 18px 42px rgba(10,110,189,.18); }
+.tarjeta-destino:hover   { box-shadow: 0 20px 46px rgba(10,110,189,.25); }
+
+/* --- Formas decorativas sutiles detrás de secciones --- */
+#como-funciona,
+#destinos { position: relative; overflow: hidden; }
+#como-funciona::before,
+#destinos::before {
+  content: "";
+  position: absolute;
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,122,89,.12), transparent 70%);
+  top: -130px; right: -130px;
+  pointer-events: none;
+  z-index: 0;
+}
+#como-funciona > .container,
+#destinos > .container { position: relative; z-index: 1; }

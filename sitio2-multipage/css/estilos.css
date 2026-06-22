@@ -289,3 +289,73 @@ main { min-height: 60vh; }
   .encabezado-pagina { padding-top: 6rem; }
   .tarjeta-galeria img { height: 210px; }
 }
+
+/* ============================================================
+   PULIDO VISUAL v2 — capa aditiva
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 2px;
+}
+
+/* Títulos con gradiente (excluye secciones de fondo de color) */
+main section:not(.text-white) h2 {
+  background: linear-gradient(120deg, var(--color-oceano), var(--color-coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+main section:not(.text-white) h2.text-center::after {
+  content: "";
+  display: block;
+  width: 64px; height: 4px;
+  margin: .8rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(120deg, var(--color-oceano), var(--color-coral));
+}
+
+/* Hero con overlay animado */
+.hero-seccion__overlay {
+  background: linear-gradient(160deg, rgba(11,37,69,.85), rgba(10,110,189,.5), rgba(255,122,89,.22));
+  background-size: 200% 200%;
+  animation: heroGradient 16s ease infinite;
+}
+@keyframes heroGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+
+/* Botón CTA con brillo */
+.btn--cta { position: relative; overflow: hidden; }
+.btn--cta::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -130%;
+  width: 60%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,.45), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+}
+.btn--cta:hover::after { left: 150%; }
+
+/* Tarjetas con glow */
+.tarjeta-paso,
+.tarjeta-beneficio,
+.tarjeta-viaje { transition: transform var(--transicion), box-shadow var(--transicion); }
+.tarjeta-paso:hover,
+.tarjeta-beneficio:hover,
+.tarjeta-viaje:hover { box-shadow: 0 18px 42px rgba(10,110,189,.20); }

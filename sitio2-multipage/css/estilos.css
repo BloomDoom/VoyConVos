@@ -99,7 +99,7 @@ main { min-height: 60vh; }
   align-items: center;
   text-align: center;
   color: #fff;
-  background: url('../img/ruta_panoramica.png') center/cover no-repeat;
+  background: url('../img/hero-ruta-costa.jpg') center/cover no-repeat;
 }
 .hero-seccion__overlay {
   position: absolute; inset: 0;

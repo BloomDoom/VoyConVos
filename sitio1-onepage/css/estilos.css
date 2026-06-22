@@ -95,7 +95,7 @@ section { scroll-margin-top: 70px; }
 .hero-seccion {
   position: relative;
   min-height: 100vh;
-  background: url('../img/ruta_panoramica.png') center/cover no-repeat fixed;
+  background: url('../img/hero-ruta-costa.jpg') center/cover no-repeat fixed;
 }
 .hero-seccion__overlay {
   position: absolute; inset: 0;

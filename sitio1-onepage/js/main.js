@@ -76,26 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.5 });
   contadores.forEach(c => obsContador.observe(c));
 
-  /* ========== 8. Filtro de destinos por zona ========== */
-  const botonesFiltro = document.querySelectorAll('.filtro-btn');
-  const items = document.querySelectorAll('.item-destino');
-  const sinResultados = document.querySelector('.sin-resultados');
-
-  botonesFiltro.forEach(btn => {
-    btn.addEventListener('click', () => {
-      botonesFiltro.forEach(b => b.classList.remove('activo'));
-      btn.classList.add('activo');
-      const filtro = btn.dataset.filtro;
-      let visibles = 0;
-      items.forEach(item => {
-        const mostrar = filtro === 'todos' || item.dataset.zona === filtro;
-        item.style.display = mostrar ? '' : 'none';
-        if (mostrar) visibles++;
-      });
-      if (sinResultados) sinResultados.hidden = visibles !== 0;
-    });
-  });
-
   /* ========== 9. Formulario de contacto (EmailJS + validación) ========== */
   const form = document.getElementById('formularioContacto');
   const alertaExito = document.getElementById('alertaExito');

@@ -263,22 +263,14 @@
     </section>
 
     <!-- ============================================================
-         4 · DESTINOS / CATEGORÍAS (filtro JS sobre las categorías)
+         4 · DESTINOS
          ============================================================ -->
     <section id="destinos" class="py-5">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-          <span class="etiqueta-seccion">Categorías</span>
-          <h2 class="fw-bold">Destinos disponibles</h2>
-          <p class="text-muted">Filtrá por zona de la costa y descubrí adónde se está viajando.</p>
-        </div>
-
-        <!-- Botones de filtro (interacción JS) -->
-        <div class="text-center mb-4 filtros-destino" data-aos="fade-up">
-          <button class="btn btn-sm filtro-btn activo" data-filtro="todos">Todos</button>
-          <button class="btn btn-sm filtro-btn" data-filtro="norte">Costa Norte</button>
-          <button class="btn btn-sm filtro-btn" data-filtro="atlantica">Costa Atlántica</button>
-          <button class="btn btn-sm filtro-btn" data-filtro="sur">Costa Sur</button>
+          <span class="etiqueta-seccion">Destinos</span>
+          <h2 class="fw-bold">Destinos de la costa</h2>
+          <p class="text-muted">Algunos de los lugares de la costa atlántica a los que podés viajar.</p>
         </div>
 
         <div class="row g-4" id="grillaDestinos">
@@ -286,7 +278,6 @@
             <article class="tarjeta-destino h-100">
               <img src="img/mar-del-plata.jpg" alt="Playa y edificios de Mar del Plata con sus carpas">
               <div class="tarjeta-destino__cuerpo">
-                <span class="badge-zona">Costa Atlántica</span>
                 <h3 class="h5">Mar del Plata</h3>
                 <p class="text-muted small mb-2">El principal balneario de la costa atlántica, con playas, rambla y vida todo el año.</p>
                 <span class="tarjeta-destino__viajes"><i class="bi bi-geo-alt-fill"></i> ≈ 400 km desde Buenos Aires</span>
@@ -297,7 +288,6 @@
             <article class="tarjeta-destino h-100">
               <img src="img/pinamar.jpg" alt="Médanos y vegetación junto al mar en Pinamar">
               <div class="tarjeta-destino__cuerpo">
-                <span class="badge-zona">Costa Norte</span>
                 <h3 class="h5">Pinamar</h3>
                 <p class="text-muted small mb-2">Bosque y mar. Ideal para escapadas de fin de semana.</p>
                 <span class="tarjeta-destino__viajes"><i class="bi bi-geo-alt-fill"></i> ≈ 340 km desde Buenos Aires</span>
@@ -308,7 +298,6 @@
             <article class="tarjeta-destino h-100">
               <img src="img/villa-gesell.jpg" alt="Playa de Villa Gesell con el pueblo al fondo">
               <div class="tarjeta-destino__cuerpo">
-                <span class="badge-zona">Costa Norte</span>
                 <h3 class="h5">Villa Gesell</h3>
                 <p class="text-muted small mb-2">Playas extensas y ambiente joven a pocas horas de viaje.</p>
                 <span class="tarjeta-destino__viajes"><i class="bi bi-geo-alt-fill"></i> ≈ 360 km desde Buenos Aires</span>
@@ -319,7 +308,6 @@
             <article class="tarjeta-destino h-100">
               <img src="img/miramar.jpg" alt="Playa de Miramar sobre el océano Atlántico">
               <div class="tarjeta-destino__cuerpo">
-                <span class="badge-zona">Costa Atlántica</span>
                 <h3 class="h5">Miramar</h3>
                 <p class="text-muted small mb-2">Tranquila y familiar, vecina de Mar del Plata.</p>
                 <span class="tarjeta-destino__viajes"><i class="bi bi-geo-alt-fill"></i> ≈ 450 km desde Buenos Aires</span>
@@ -330,7 +318,6 @@
             <article class="tarjeta-destino h-100">
               <img src="img/necochea.jpg" alt="Playa de Necochea con sombrillas de colores en verano">
               <div class="tarjeta-destino__cuerpo">
-                <span class="badge-zona">Costa Sur</span>
                 <h3 class="h5">Necochea</h3>
                 <p class="text-muted small mb-2">Playas amplias hacia el sur de la provincia.</p>
                 <span class="tarjeta-destino__viajes"><i class="bi bi-geo-alt-fill"></i> ≈ 500 km desde Buenos Aires</span>
@@ -341,7 +328,6 @@
             <article class="tarjeta-destino h-100">
               <img src="img/mar-de-las-pampas.jpg" alt="Playa amplia y agreste de Mar de las Pampas">
               <div class="tarjeta-destino__cuerpo">
-                <span class="badge-zona">Costa Norte</span>
                 <h3 class="h5">Mar de las Pampas</h3>
                 <p class="text-muted small mb-2">Naturaleza y calma entre los pinos y el mar.</p>
                 <span class="tarjeta-destino__viajes"><i class="bi bi-geo-alt-fill"></i> ≈ 365 km desde Buenos Aires</span>
@@ -349,7 +335,6 @@
             </article>
           </div>
         </div>
-        <p class="text-center text-muted mt-4 sin-resultados" hidden>No hay destinos en esta zona por el momento.</p>
       </div>
     </section>
 

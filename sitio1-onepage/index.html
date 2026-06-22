@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO ===== -->
+  <title>VoyConVos — Viajes compartidos a la costa argentina | Carpooling solidario</title>
+  <meta name="description" content="VoyConVos conecta viajeros y conductores para compartir viajes a la costa argentina: más económico, sustentable y solidario. Sumate a la red de carpooling.">
+  <meta name="keywords" content="viajes compartidos, carpooling, costa argentina, Mar del Plata, Pinamar, compartir auto, viajar barato">
+  <meta name="author" content="VoyConVos">
+  <link rel="canonical" href="https://voyconvos.netlify.app/">
+
+  <!-- Open Graph (redes sociales) -->
+  <meta property="og:title" content="VoyConVos — Compartí el camino a la costa">
+  <meta property="og:description" content="Carpooling solidario hacia la costa argentina. Más económico, sustentable y en compañía.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/playa-mar-del-plata.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+
+  <!-- Tipografías (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 (Framework CSS — vía CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (íconos vía CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- AOS — Animate On Scroll (plugin JS) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <!-- Swiper — slider (plugin JS) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- GLightbox — galería lightbox (plugin JS) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <!-- CSS nativo propio -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navPrincipal" data-bs-offset="90" tabindex="0">
+
+  <!-- ============================================================
+       ENCABEZADO + NAVEGACIÓN (semántico: header > nav)
+       ============================================================ -->
+  <header>
+    <nav id="navPrincipal" class="navbar navbar-expand-lg navbar-dark fixed-top barra-navegacion" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">
+          <i class="bi bi-car-front-fill"></i> VoyConVos
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#institucional">Institucional</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link btn btn--cta ms-lg-3 px-3" href="#contacto">Sumarme</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         1 · INICIO (HERO)
+         ============================================================ -->
+    <section id="inicio" class="hero-seccion d-flex align-items-center text-center text-white">
+      <div class="hero-seccion__overlay"></div>
+      <div class="container position-relative" data-aos="fade-up">
+        <h1 class="display-4 fw-bold mb-3">Compartí el camino a la costa</h1>
+        <p class="lead mx-auto mb-4 hero-seccion__texto">
+          Conectamos <strong>viajeros</strong> que necesitan llegar con <strong>conductores</strong> que tienen lugar.
+          Más económico, más sustentable y mucho mejor en compañía.
+        </p>
+        <p class="hero-seccion__typed mb-4" id="typed"></p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#destinos" class="btn btn-lg btn--cta">Ver destinos</a>
+          <a href="#contacto" class="btn btn-lg btn-outline-light">Ofrecé tu auto</a>
+        </div>
+        <div class="hero-seccion__stats mt-5 row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-6 col-md-3">
+            <span class="contador d-block" data-objetivo="1240">0</span>
+            <small>Viajeros conectados</small>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="contador d-block" data-objetivo="380">0</span>
+            <small>Conductores activos</small>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="contador d-block" data-objetivo="46">0</span>
+            <small>Toneladas CO₂ evitadas</small>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="contador d-block" data-objetivo="12">0</span>
+            <small>Destinos en la costa</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CÓMO FUNCIONA
+         ============================================================ -->
+    <section class="py-5 bg-light" id="como-funciona">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-2" data-aos="fade-up">¿Cómo funciona?</h2>
+        <p class="text-center text-muted mb-5" data-aos="fade-up">Tres pasos para empezar a viajar acompañado</p>
+        <div class="row g-4">
+          <article class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">1</span>
+              <h3 class="h5 mt-3">Buscás tu viaje</h3>
+              <p class="text-muted mb-0">Explorá los viajes disponibles hacia tu destino en la costa y elegí el que mejor te quede.</p>
+            </div>
+          </article>
+          <article class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">2</span>
+              <h3 class="h5 mt-3">Te conectás</h3>
+              <p class="text-muted mb-0">Contactás al conductor, coordinan el punto de encuentro y los detalles del viaje.</p>
+            </div>
+          </article>
+          <article class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">3</span>
+              <h3 class="h5 mt-3">Viajás y ahorrás</h3>
+              <p class="text-muted mb-0">Compartís gastos de combustible y peajes. Todos ganan: vos llegás, el conductor recupera costos.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2 · INSTITUCIONAL (incluye la problemática y su solución)
+         ============================================================ -->
+    <section id="institucional" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="img/amigos-auto-ruta.jpg" class="img-fluid rounded-4 shadow imagen-institucional" alt="Grupo de amigos viajando juntos en auto hacia la costa argentina">
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <span class="etiqueta-seccion">Quiénes somos</span>
+            <h2 class="fw-bold mb-3">Una red solidaria de viajes compartidos</h2>
+            <p>
+              <strong>VoyConVos</strong> nació para resolver un problema real: cada temporada
+              <strong>miles de autos viajan a la costa argentina casi vacíos</strong>, mientras muchísimas
+              personas no consiguen cómo llegar o pagan pasajes muy caros. Eso significa más gasto,
+              más tránsito en las rutas y más emisiones de CO₂ innecesarias.
+            </p>
+            <p>
+              Nuestra solución es simple: una plataforma <strong>sin fines de lucro</strong> que
+              conecta a quienes tienen lugar en su auto con quienes necesitan viajar, para
+              <strong>compartir el camino y los gastos</strong>.
+            </p>
+            <ul class="lista-valores">
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Económico:</strong> compartís combustible y peajes.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Sustentable:</strong> menos autos, menos CO₂ en la ruta.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Solidario:</strong> una comunidad que se ayuda a llegar.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Gratuito:</strong> no cobramos comisión ni intermediamos dinero.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Beneficios (CSS Grid nativo) -->
+        <div class="grilla-beneficios mt-5">
+          <article class="tarjeta-beneficio" data-aos="zoom-in">
+            <div class="tarjeta-beneficio__icono">💰</div>
+            <h3 class="h6">Económico</h3>
+            <p>Reducí el costo de tu viaje compartiendo gastos entre todos los pasajeros.</p>
+          </article>
+          <article class="tarjeta-beneficio" data-aos="zoom-in" data-aos-delay="100">
+            <div class="tarjeta-beneficio__icono">🌿</div>
+            <h3 class="h6">Sustentable</h3>
+            <p>Menos autos en la ruta significa menor emisión de CO₂ y menos congestión.</p>
+          </article>
+          <article class="tarjeta-beneficio" data-aos="zoom-in" data-aos-delay="200">
+            <div class="tarjeta-beneficio__icono">🤝</div>
+            <h3 class="h6">Solidario</h3>
+            <p>Una comunidad de viajeros que se ayudan mutuamente para llegar a destino.</p>
+          </article>
+          <article class="tarjeta-beneficio" data-aos="zoom-in" data-aos-delay="300">
+            <div class="tarjeta-beneficio__icono">🆓</div>
+            <h3 class="h6">Sin fines de lucro</h3>
+            <p>La plataforma es completamente gratuita. Tu aporte solo cubre gastos del viaje.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3 · GALERÍA DE IMÁGENES (Swiper slider + GLightbox)
+         ============================================================ -->
+    <section id="galeria" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="etiqueta-seccion">Galería</span>
+          <h2 class="fw-bold">Momentos del camino</h2>
+          <p class="text-muted">Destinos de la costa y viajeros que ya comparten su ruta. Hacé clic para ampliar.</p>
+        </div>
+
+        <div class="swiper galeria-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="img/playa-mar-del-plata.jpg" class="glightbox tarjeta-galeria" data-gallery="costa" data-title="Mar del Plata">
+                <img src="img/playa-mar-del-plata.jpg" alt="Playa de Mar del Plata en un día soleado de verano">
+                <span class="tarjeta-galeria__pie">Mar del Plata</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/pinamar-dunas.jpg" class="glightbox tarjeta-galeria" data-gallery="costa" data-title="Pinamar">
+                <img src="img/pinamar-dunas.jpg" alt="Dunas y bosque junto al mar en Pinamar">
+                <span class="tarjeta-galeria__pie">Pinamar</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/costa-aerea.jpg" class="glightbox tarjeta-galeria" data-gallery="costa" data-title="Vista aérea de la costa">
+                <img src="img/costa-aerea.jpg" alt="Vista aérea de la costa atlántica argentina">
+                <span class="tarjeta-galeria__pie">Costa atlántica</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/ruta-viaje.jpg" class="glightbox tarjeta-galeria" data-gallery="costa" data-title="En ruta">
+                <img src="img/ruta-viaje.jpg" alt="Auto recorriendo una ruta panorámica rumbo a la costa">
+                <span class="tarjeta-galeria__pie">En ruta</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/roadtrip-amigos.jpg" class="glightbox tarjeta-galeria" data-gallery="costa" data-title="Viaje entre amigos">
+                <img src="img/roadtrip-amigos.jpg" alt="Grupo de amigos disfrutando un viaje compartido en auto">
+                <span class="tarjeta-galeria__pie">Entre amigos</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="img/sombrillas-playa.jpg" class="glightbox tarjeta-galeria" data-gallery="costa" data-title="Playa">
+                <img src="img/sombrillas-playa.jpg" alt="Sombrillas de colores en una playa de la costa">
+                <span class="tarjeta-galeria__pie">Verano en la costa</span>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4 · DESTINOS / CATEGORÍAS (filtro JS sobre las categorías)
+         ============================================================ -->
+    <section id="destinos" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="etiqueta-seccion">Categorías</span>
+          <h2 class="fw-bold">Destinos disponibles</h2>
+          <p class="text-muted">Filtrá por zona de la costa y descubrí adónde se está viajando.</p>
+        </div>
+
+        <!-- Botones de filtro (interacción JS) -->
+        <div class="text-center mb-4 filtros-destino" data-aos="fade-up">
+          <button class="btn btn-sm filtro-btn activo" data-filtro="todos">Todos</button>
+          <button class="btn btn-sm filtro-btn" data-filtro="norte">Costa Norte</button>
+          <button class="btn btn-sm filtro-btn" data-filtro="atlantica">Costa Atlántica</button>
+          <button class="btn btn-sm filtro-btn" data-filtro="sur">Costa Sur</button>
+        </div>
+
+        <div class="row g-4" id="grillaDestinos">
+          <div class="col-sm-6 col-lg-4 item-destino" data-zona="atlantica" data-aos="fade-up">
+            <article class="tarjeta-destino h-100">
+              <img src="img/playa-mar-del-plata.jpg" alt="Playa céntrica de Mar del Plata">
+              <div class="tarjeta-destino__cuerpo">
+                <span class="badge-zona">Costa Atlántica</span>
+                <h3 class="h5">Mar del Plata</h3>
+                <p class="text-muted small mb-2">El destino más buscado. Viajes todas las semanas desde varias ciudades.</p>
+                <span class="tarjeta-destino__viajes"><i class="bi bi-people-fill"></i> 24 viajes activos</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 item-destino" data-zona="norte" data-aos="fade-up" data-aos-delay="100">
+            <article class="tarjeta-destino h-100">
+              <img src="img/pinamar-dunas.jpg" alt="Dunas y playa de Pinamar">
+              <div class="tarjeta-destino__cuerpo">
+                <span class="badge-zona">Costa Norte</span>
+                <h3 class="h5">Pinamar</h3>
+                <p class="text-muted small mb-2">Bosque y mar. Ideal para escapadas de fin de semana.</p>
+                <span class="tarjeta-destino__viajes"><i class="bi bi-people-fill"></i> 11 viajes activos</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 item-destino" data-zona="norte" data-aos="fade-up" data-aos-delay="200">
+            <article class="tarjeta-destino h-100">
+              <img src="img/sombrillas-playa.jpg" alt="Playa de Villa Gesell con sombrillas">
+              <div class="tarjeta-destino__cuerpo">
+                <span class="badge-zona">Costa Norte</span>
+                <h3 class="h5">Villa Gesell</h3>
+                <p class="text-muted small mb-2">Playas extensas y ambiente joven a pocas horas de viaje.</p>
+                <span class="tarjeta-destino__viajes"><i class="bi bi-people-fill"></i> 9 viajes activos</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 item-destino" data-zona="atlantica" data-aos="fade-up">
+            <article class="tarjeta-destino h-100">
+              <img src="img/costa-aerea.jpg" alt="Vista aérea de Miramar">
+              <div class="tarjeta-destino__cuerpo">
+                <span class="badge-zona">Costa Atlántica</span>
+                <h3 class="h5">Miramar</h3>
+                <p class="text-muted small mb-2">Tranquila y familiar, vecina de Mar del Plata.</p>
+                <span class="tarjeta-destino__viajes"><i class="bi bi-people-fill"></i> 6 viajes activos</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 item-destino" data-zona="sur" data-aos="fade-up" data-aos-delay="100">
+            <article class="tarjeta-destino h-100">
+              <img src="img/playa-atardecer.jpg" alt="Atardecer en la playa de Necochea">
+              <div class="tarjeta-destino__cuerpo">
+                <span class="badge-zona">Costa Sur</span>
+                <h3 class="h5">Necochea</h3>
+                <p class="text-muted small mb-2">Playas amplias hacia el sur de la provincia.</p>
+                <span class="tarjeta-destino__viajes"><i class="bi bi-people-fill"></i> 5 viajes activos</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 item-destino" data-zona="norte" data-aos="fade-up" data-aos-delay="200">
+            <article class="tarjeta-destino h-100">
+              <img src="img/pinamar-dunas.jpg" alt="Bosque junto al mar en Mar de las Pampas">
+              <div class="tarjeta-destino__cuerpo">
+                <span class="badge-zona">Costa Norte</span>
+                <h3 class="h5">Mar de las Pampas</h3>
+                <p class="text-muted small mb-2">Naturaleza y calma entre los pinos y el mar.</p>
+                <span class="tarjeta-destino__viajes"><i class="bi bi-people-fill"></i> 4 viajes activos</span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="text-center text-muted mt-4 sin-resultados" hidden>No hay destinos en esta zona por el momento.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5 · CONTACTO (formulario EmailJS + mapa embebido)
+         ============================================================ -->
+    <section id="contacto" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="etiqueta-seccion">Contacto</span>
+          <h2 class="fw-bold">Sumate a la red</h2>
+          <p class="text-muted">Completá el formulario y te contactamos para coordinar tu viaje.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Formulario -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <form id="formularioContacto" class="formulario-contacto p-4 rounded-4 shadow-sm bg-white" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: María González" required>
+                <div class="invalid-feedback">Ingresá tu nombre completo.</div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                  <div class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="telefono" class="form-label">Teléfono / WhatsApp</label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="11 5566 7788" required>
+                  <div class="invalid-feedback">Ingresá un teléfono válido.</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="rol" class="form-label">¿Cómo viajás?</label>
+                  <select class="form-select" id="rol" name="rol" required>
+                    <option value="">Elegí una opción</option>
+                    <option value="pasajero">Soy pasajero/a</option>
+                    <option value="conductor">Ofrezco mi auto</option>
+                  </select>
+                  <div class="invalid-feedback">Seleccioná cómo viajás.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="destino" class="form-label">Destino</label>
+                  <select class="form-select" id="destino" name="destino" required>
+                    <option value="">Elegí un destino</option>
+                    <option>Mar del Plata</option>
+                    <option>Pinamar</option>
+                    <option>Villa Gesell</option>
+                    <option>Miramar</option>
+                    <option>Necochea</option>
+                    <option>Mar de las Pampas</option>
+                  </select>
+                  <div class="invalid-feedback">Seleccioná un destino.</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Comentarios</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Contanos fecha tentativa, punto de encuentro, etc." required></textarea>
+                <div class="invalid-feedback">Escribí un mensaje (mínimo 10 caracteres).</div>
+              </div>
+              <button type="submit" class="btn btn--cta w-100" id="btnEnviar">
+                <span class="btn-texto">Enviar solicitud</span>
+                <span class="spinner-border spinner-border-sm d-none" id="spinnerEnviar" role="status" aria-hidden="true"></span>
+              </button>
+              <!-- Aviso de estado del envío -->
+              <div class="alert alert-success mt-3 d-none" id="alertaExito" role="alert">
+                <i class="bi bi-check-circle-fill"></i> ¡Gracias por sumarte! Recibimos tu información y te vamos a contactar pronto.
+              </div>
+              <div class="alert alert-danger mt-3 d-none" id="alertaError" role="alert">
+                <i class="bi bi-exclamation-triangle-fill"></i> Hubo un problema al enviar. Probá de nuevo en unos minutos.
+              </div>
+            </form>
+          </div>
+
+          <!-- Mapa embebido + datos -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="caja-mapa rounded-4 shadow-sm overflow-hidden h-100">
+              <iframe
+                title="Mapa de la costa atlántica argentina — Mar del Plata"
+                src="https://www.google.com/maps?q=Mar%20del%20Plata%2C%20Buenos%20Aires%2C%20Argentina&output=embed"
+                width="100%" height="320" style="border:0;" allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="p-4">
+                <h3 class="h6"><i class="bi bi-geo-alt-fill"></i> Punto de encuentro principal</h3>
+                <p class="text-muted small mb-2">Terminal de Retiro y principales accesos a la costa atlántica.</p>
+                <p class="mb-1"><i class="bi bi-envelope-fill"></i> hola@voyconvos.com.ar</p>
+                <p class="mb-0"><i class="bi bi-whatsapp"></i> +54 11 5566 7788</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA (semántico: footer)
+       ============================================================ -->
+  <footer class="pie-pagina text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h2 class="h5 fw-bold"><i class="bi bi-car-front-fill"></i> VoyConVos</h2>
+          <p class="text-white-50">Carpooling solidario hacia la costa argentina. Compartí el camino, los gastos y el viaje.</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="h6">Navegación</h3>
+          <ul class="list-unstyled pie-pagina__links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#institucional">Institucional</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h6">Seguinos</h3>
+          <div class="pie-pagina__redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center text-white-50 mb-0 small">&copy; 2026 VoyConVos · Trabajo Final — Diseño y Desarrollo Web</p>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba (interacción JS) -->
+  <button id="btnArriba" class="boton-arriba" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- ============================================================
+       SCRIPTS (todos vía CDN + JS propio)
+       ============================================================ -->
+  <!-- Bootstrap Bundle (plugin JS 1) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (plugin JS 2) -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Swiper (plugin JS 3) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- GLightbox (plugin JS 4) -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <!-- Typed.js (plugin JS 5) -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!-- EmailJS (plugin JS 6 — formulario de contacto) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- JS propio -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO ===== -->
+  <title>Agustín Espina — Desarrollador Web Front-End | Portfolio</title>
+  <meta name="description" content="Portfolio profesional de Agustín Espina, desarrollador web front-end. Proyectos en HTML, CSS, JavaScript y Bootstrap. Conocé mi trabajo y contactame.">
+  <meta name="keywords" content="desarrollador web, front-end, portfolio, HTML, CSS, JavaScript, Bootstrap, Argentina">
+  <meta name="author" content="Agustín Espina">
+  <meta property="og:title" content="Agustín Espina — Desarrollador Web Front-End">
+  <meta property="og:description" content="Portfolio profesional: proyectos web con HTML, CSS, JavaScript y Bootstrap.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/roadtrip-amigos.jpg">
+
+  <!-- Plantilla base: portfolio one-page gratuito personalizado.
+       Estructura adaptada e intervenida con identidad, colores,
+       secciones y proyectos propios (ver README). -->
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navPortfolio" data-bs-offset="90">
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav id="navPortfolio" class="navbar navbar-expand-lg navbar-dark fixed-top barra-portfolio" aria-label="Navegación del portfolio">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">&lt;AE/&gt;</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO / PRESENTACIÓN ===== -->
+    <section id="inicio" class="hero-portfolio d-flex align-items-center text-white">
+      <div class="hero-portfolio__overlay"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-7" data-aos="fade-right">
+            <p class="hero-portfolio__saludo">¡Hola! Soy</p>
+            <h1 class="display-3 fw-bold">Agustín Espina</h1>
+            <h2 class="h3 mb-3"><span id="typed"></span></h2>
+            <p class="lead hero-portfolio__bio">
+              Desarrollador web front-end. Construyo sitios rápidos, accesibles y
+              con buen diseño usando HTML, CSS, JavaScript y Bootstrap.
+            </p>
+            <div class="d-flex gap-3 flex-wrap mt-4">
+              <a href="#proyectos" class="btn btn-lg btn--acento">Ver proyectos</a>
+              <a href="#contacto" class="btn btn-lg btn-outline-light">Contactame</a>
+            </div>
+            <div class="hero-portfolio__redes mt-4">
+              <a href="https://github.com/BloomDoom" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:agustinespina.ae@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center d-none d-lg-block" data-aos="zoom-in">
+            <div class="hero-portfolio__avatar">AE</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="sobre-mi" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <img src="img/interior-auto-viaje.jpg" class="img-fluid rounded-4 shadow imagen-perfil" alt="Espacio de trabajo de Agustín Espina, desarrollador web">
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <span class="etiqueta-portfolio">Sobre mí</span>
+            <h2 class="fw-bold mb-3">Diseño y desarrollo experiencias web</h2>
+            <p>Soy estudiante de Diseño y Desarrollo Web y me apasiona transformar ideas en
+              sitios reales. Me gusta cuidar los detalles: que todo sea responsivo,
+              accesible y fácil de usar.</p>
+            <p>Durante la cursada desarrollé <strong>VoyConVos</strong>, una plataforma de
+              viajes compartidos a la costa, y trabajé con HTML semántico, CSS nativo,
+              frameworks y librerías JavaScript.</p>
+            <div class="row g-3 mt-2">
+              <div class="col-6 col-md-3 text-center">
+                <span class="dato-numero" data-objetivo="3">0</span>
+                <small class="d-block text-muted">Proyectos web</small>
+              </div>
+              <div class="col-6 col-md-3 text-center">
+                <span class="dato-numero" data-objetivo="12">0</span>
+                <small class="d-block text-muted">Tecnologías</small>
+              </div>
+              <div class="col-6 col-md-3 text-center">
+                <span class="dato-numero" data-objetivo="100">0</span>
+                <small class="d-block text-muted">% Responsivo</small>
+              </div>
+              <div class="col-6 col-md-3 text-center">
+                <span class="dato-numero" data-objetivo="1">0</span>
+                <small class="d-block text-muted">Año cursando</small>
+              </div>
+            </div>
+            <a href="#contacto" class="btn btn--acento mt-4">Trabajemos juntos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section id="habilidades" class="py-5 seccion-oscura text-white">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="etiqueta-portfolio">Habilidades</span>
+          <h2 class="fw-bold">Tecnologías que utilizo</h2>
+        </div>
+        <div class="grilla-skills">
+          <div class="tarjeta-skill" data-aos="zoom-in"><i class="bi bi-filetype-html"></i><span>HTML5</span></div>
+          <div class="tarjeta-skill" data-aos="zoom-in" data-aos-delay="50"><i class="bi bi-filetype-css"></i><span>CSS3</span></div>
+          <div class="tarjeta-skill" data-aos="zoom-in" data-aos-delay="100"><i class="bi bi-filetype-js"></i><span>JavaScript</span></div>
+          <div class="tarjeta-skill" data-aos="zoom-in" data-aos-delay="150"><i class="bi bi-bootstrap-fill"></i><span>Bootstrap</span></div>
+          <div class="tarjeta-skill" data-aos="zoom-in" data-aos-delay="200"><i class="bi bi-git"></i><span>Git</span></div>
+          <div class="tarjeta-skill" data-aos="zoom-in" data-aos-delay="250"><i class="bi bi-github"></i><span>GitHub</span></div>
+          <div class="tarjeta-skill" data-aos="zoom-in" data-aos-delay="300"><i class="bi bi-phone"></i><span>Responsive</span></div>
+          <div class="tarjeta-skill" data-aos="zoom-in" data-aos-delay="350"><i class="bi bi-search"></i><span>SEO</span></div>
+        </div>
+
+        <!-- Barras de nivel -->
+        <div class="row g-4 mt-4 justify-content-center">
+          <div class="col-md-5" data-aos="fade-up">
+            <div class="barra-skill"><span>HTML & CSS</span><span>90%</span></div>
+            <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+          </div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="barra-skill"><span>JavaScript</span><span>75%</span></div>
+            <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+          </div>
+          <div class="col-md-5" data-aos="fade-up">
+            <div class="barra-skill"><span>Bootstrap</span><span>85%</span></div>
+            <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+          </div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="barra-skill"><span>Git & GitHub</span><span>70%</span></div>
+            <div class="progress"><div class="progress-bar" style="width:70%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section id="proyectos" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="etiqueta-portfolio">Proyectos</span>
+          <h2 class="fw-bold">Trabajos realizados</h2>
+          <p class="text-muted">Una selección de proyectos del Trabajo Final. Hacé clic para ver la captura.</p>
+        </div>
+        <div class="row g-4">
+          <article class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="tarjeta-proyecto h-100">
+              <a href="img/playa-mar-del-plata.jpg" class="glightbox" data-gallery="proy" data-title="VoyConVos — One Page">
+                <img src="img/playa-mar-del-plata.jpg" alt="Captura del sitio One Page de VoyConVos">
+              </a>
+              <div class="tarjeta-proyecto__cuerpo">
+                <span class="badge-tec">One Page</span>
+                <h3 class="h5">VoyConVos · One Page</h3>
+                <p class="text-muted small">Landing de viajes compartidos a la costa. HTML semántico, CSS nativo, Bootstrap, Swiper, GLightbox y EmailJS.</p>
+                <div class="tarjeta-proyecto__links">
+                  <a href="../sitio1-onepage/index.html" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Ver sitio</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="tarjeta-proyecto h-100">
+              <a href="img/ruta-viaje.jpg" class="glightbox" data-gallery="proy" data-title="VoyConVos — Multi Page">
+                <img src="img/ruta-viaje.jpg" alt="Captura del sitio Multi Page de VoyConVos">
+              </a>
+              <div class="tarjeta-proyecto__cuerpo">
+                <span class="badge-tec">Multi Page</span>
+                <h3 class="h5">VoyConVos · Multi Page</h3>
+                <p class="text-muted small">Sitio multipágina con estructura profesional: viajes, galería con GLightbox, institucional y formulario EmailJS.</p>
+                <div class="tarjeta-proyecto__links">
+                  <a href="../sitio2-multipage/index.html" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Ver sitio</a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="tarjeta-proyecto h-100">
+              <a href="img/roadtrip-amigos.jpg" class="glightbox" data-gallery="proy" data-title="Portfolio profesional">
+                <img src="img/roadtrip-amigos.jpg" alt="Captura del portfolio profesional">
+              </a>
+              <div class="tarjeta-proyecto__cuerpo">
+                <span class="badge-tec">Portfolio</span>
+                <h3 class="h5">Portfolio profesional</h3>
+                <p class="text-muted small">Este portfolio: plantilla personalizada con identidad propia, animaciones AOS y formulario de contacto EmailJS.</p>
+                <div class="tarjeta-proyecto__links">
+                  <a href="https://github.com/BloomDoom/VoyConVos" target="_blank" rel="noopener"><i class="bi bi-github"></i> Repositorio</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="py-5 seccion-oscura text-white">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="etiqueta-portfolio">Contacto</span>
+          <h2 class="fw-bold">¿Trabajamos juntos?</h2>
+          <p class="text-white-50">Escribime y te respondo a la brevedad.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-7" data-aos="fade-up">
+            <form id="formularioContacto" class="formulario-portfolio p-4 rounded-4" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                  <div class="invalid-feedback">Ingresá tu nombre.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="tu@correo.com" required>
+                  <div class="invalid-feedback">Ingresá un email válido.</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto</label>
+                <input type="text" class="form-control" id="asunto" name="asunto" placeholder="¿En qué puedo ayudarte?" required>
+                <div class="invalid-feedback">Ingresá un asunto.</div>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribí tu mensaje…" required></textarea>
+                <div class="invalid-feedback">Escribí un mensaje (mínimo 10 caracteres).</div>
+              </div>
+              <button type="submit" class="btn btn--acento w-100" id="btnEnviar">
+                <span class="btn-texto">Enviar mensaje</span>
+                <span class="spinner-border spinner-border-sm d-none" id="spinnerEnviar" role="status" aria-hidden="true"></span>
+              </button>
+              <div class="alert alert-success mt-3 d-none" id="alertaExito" role="alert">
+                <i class="bi bi-check-circle-fill"></i> ¡Gracias por tu mensaje! Te voy a responder pronto.
+              </div>
+              <div class="alert alert-danger mt-3 d-none" id="alertaError" role="alert">
+                <i class="bi bi-exclamation-triangle-fill"></i> Hubo un problema al enviar. Probá de nuevo.
+              </div>
+            </form>
+            <div class="text-center mt-4 hero-portfolio__redes">
+              <a href="https://github.com/BloomDoom" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="mailto:agustinespina.ae@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-portfolio text-center text-white-50 py-4">
+    <div class="container">
+      <p class="mb-0 small">&copy; 2026 Agustín Espina · Portfolio · Trabajo Final — Diseño y Desarrollo Web</p>
+    </div>
+  </footer>
+
+  <button id="btnArriba" class="boton-arriba" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- ===== SCRIPTS (CDN + propio) ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

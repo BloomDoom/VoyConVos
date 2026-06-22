@@ -1,0 +1,299 @@
+/* ============================================================
+   VoyConVos · Sitio 1 (One Page) — CSS NATIVO
+   Paleta costera: océano + atardecer
+   ============================================================ */
+
+:root {
+  --color-oceano:    #0a6ebd;   /* azul océano (primario) */
+  --color-oceano-os: #074e87;   /* azul oscuro */
+  --color-coral:     #ff7a59;   /* coral atardecer (acento/CTA) */
+  --color-coral-os:  #e85e3d;
+  --color-noche:     #0b2545;   /* azul noche (texto/footer) */
+  --color-arena:     #f6f9fc;   /* fondo claro */
+  --color-texto:     #243b53;
+  --sombra:          0 12px 30px rgba(11, 37, 69, .12);
+  --radio:           16px;
+  --transicion:      .3s ease;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--color-texto);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, .navbar-brand { font-family: 'Poppins', sans-serif; }
+
+section { scroll-margin-top: 70px; }
+
+/* ---------- Etiqueta de sección reutilizable ---------- */
+.etiqueta-seccion {
+  display: inline-block;
+  background: rgba(10, 110, 189, .1);
+  color: var(--color-oceano);
+  font-weight: 600;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Botón CTA personalizado ---------- */
+.btn--cta {
+  background: var(--color-coral);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .65rem 1.6rem;
+  transition: var(--transicion);
+  box-shadow: 0 8px 18px rgba(255, 122, 89, .35);
+}
+.btn--cta:hover,
+.btn--cta:focus {
+  background: var(--color-coral-os);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.barra-navegacion {
+  background: rgba(11, 37, 69, .55);
+  backdrop-filter: blur(10px);
+  transition: background var(--transicion), padding var(--transicion);
+  padding-block: .9rem;
+}
+.barra-navegacion.scrolled {
+  background: var(--color-noche);
+  padding-block: .45rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+}
+.barra-navegacion .navbar-brand { font-size: 1.4rem; }
+.barra-navegacion .nav-link {
+  font-weight: 500;
+  position: relative;
+  margin-inline: .15rem;
+}
+.barra-navegacion .nav-link.active:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: .8rem; right: .8rem; bottom: .2rem;
+  height: 2px;
+  background: var(--color-coral);
+  border-radius: 2px;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero-seccion {
+  position: relative;
+  min-height: 100vh;
+  background: url('../img/ruta_panoramica.png') center/cover no-repeat fixed;
+}
+.hero-seccion__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(11,37,69,.82), rgba(10,110,189,.55));
+}
+.hero-seccion__texto { max-width: 640px; font-size: 1.2rem; }
+.hero-seccion__typed {
+  min-height: 1.8rem;
+  font-weight: 600;
+  color: #ffd9cd;
+  font-size: 1.1rem;
+}
+.hero-seccion .contador {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+.hero-seccion__stats small { color: rgba(255,255,255,.8); }
+
+/* ============================================================
+   CÓMO FUNCIONA — tarjetas de paso
+   ============================================================ */
+.tarjeta-paso {
+  background: #fff;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion);
+}
+.tarjeta-paso:hover { transform: translateY(-6px); }
+.tarjeta-paso__numero {
+  display: inline-grid;
+  place-items: center;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-oceano), var(--color-coral));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ============================================================
+   INSTITUCIONAL
+   ============================================================ */
+.imagen-institucional { transition: transform var(--transicion); }
+.imagen-institucional:hover { transform: scale(1.02); }
+
+.lista-valores { list-style: none; padding: 0; margin-top: 1.2rem; }
+.lista-valores li { margin-bottom: .6rem; }
+.lista-valores i { color: var(--color-oceano); margin-right: .4rem; }
+
+/* Grilla de beneficios — CSS Grid nativo */
+.grilla-beneficios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.tarjeta-beneficio {
+  background: var(--color-arena);
+  border: 1px solid #e3ecf5;
+  border-radius: var(--radio);
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  transition: var(--transicion);
+}
+.tarjeta-beneficio:hover {
+  border-color: var(--color-oceano);
+  box-shadow: var(--sombra);
+  transform: translateY(-4px);
+}
+.tarjeta-beneficio__icono { font-size: 2.4rem; margin-bottom: .6rem; }
+
+/* ============================================================
+   GALERÍA (Swiper + GLightbox)
+   ============================================================ */
+.galeria-swiper { padding-bottom: 3rem; }
+.tarjeta-galeria {
+  position: relative;
+  display: block;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.tarjeta-galeria img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.tarjeta-galeria:hover img { transform: scale(1.08); }
+.tarjeta-galeria__pie {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: .8rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(transparent, rgba(11,37,69,.85));
+}
+.galeria-swiper .swiper-button-prev,
+.galeria-swiper .swiper-button-next { color: var(--color-coral); }
+.galeria-swiper .swiper-pagination-bullet-active { background: var(--color-coral); }
+
+/* ============================================================
+   DESTINOS
+   ============================================================ */
+.filtro-btn {
+  border: 1px solid var(--color-oceano);
+  color: var(--color-oceano);
+  background: transparent;
+  border-radius: 999px;
+  margin: .2rem;
+  padding: .4rem 1.2rem;
+  font-weight: 500;
+  transition: var(--transicion);
+}
+.filtro-btn:hover { background: rgba(10,110,189,.1); }
+.filtro-btn.activo { background: var(--color-oceano); color: #fff; }
+
+.tarjeta-destino {
+  background: #fff;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion);
+}
+.tarjeta-destino:hover { transform: translateY(-6px); }
+.tarjeta-destino img { width: 100%; height: 190px; object-fit: cover; }
+.tarjeta-destino__cuerpo { padding: 1.2rem; }
+.tarjeta-destino__viajes { color: var(--color-oceano); font-weight: 600; font-size: .9rem; }
+.badge-zona {
+  display: inline-block;
+  background: rgba(255,122,89,.15);
+  color: var(--color-coral-os);
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .2rem .7rem;
+  border-radius: 999px;
+  margin-bottom: .5rem;
+}
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+.formulario-contacto .form-control:focus,
+.formulario-contacto .form-select:focus {
+  border-color: var(--color-oceano);
+  box-shadow: 0 0 0 .2rem rgba(10,110,189,.2);
+}
+.caja-mapa { background: #fff; }
+.caja-mapa i { color: var(--color-oceano); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.pie-pagina { background: var(--color-noche); }
+.pie-pagina__links a,
+.pie-pagina__redes a {
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  transition: color var(--transicion);
+}
+.pie-pagina__links a:hover { color: var(--color-coral); }
+.pie-pagina__links li { margin-bottom: .4rem; }
+.pie-pagina__redes { display: flex; gap: 1rem; font-size: 1.4rem; }
+.pie-pagina__redes a:hover { color: var(--color-coral); transform: translateY(-3px); }
+
+/* ============================================================
+   BOTÓN VOLVER ARRIBA
+   ============================================================ */
+.boton-arriba {
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  width: 48px; height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-coral);
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 18px rgba(255,122,89,.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transicion);
+  z-index: 1000;
+}
+.boton-arriba.visible { opacity: 1; visibility: visible; }
+.boton-arriba:hover { background: var(--color-coral-os); transform: translateY(-3px); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 991px) {
+  .barra-navegacion {
+    background: var(--color-noche);
+  }
+  .hero-seccion { background-attachment: scroll; }
+}
+@media (max-width: 575px) {
+  .hero-seccion .contador { font-size: 1.7rem; }
+  .tarjeta-galeria img { height: 220px; }
+}

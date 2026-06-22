@@ -1,0 +1,291 @@
+/* ============================================================
+   VoyConVos · Sitio 2 (Multi Page) — CSS NATIVO
+   Hoja de estilos compartida por todas las páginas.
+   ============================================================ */
+
+:root {
+  --color-oceano:    #0a6ebd;
+  --color-oceano-os: #074e87;
+  --color-coral:     #ff7a59;
+  --color-coral-os:  #e85e3d;
+  --color-noche:     #0b2545;
+  --color-arena:     #f6f9fc;
+  --color-texto:     #243b53;
+  --sombra:          0 12px 30px rgba(11, 37, 69, .12);
+  --radio:           16px;
+  --transicion:      .3s ease;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--color-texto);
+}
+
+h1, h2, h3, .navbar-brand { font-family: 'Poppins', sans-serif; }
+
+main { min-height: 60vh; }
+
+/* ---------- Elementos reutilizables ---------- */
+.etiqueta-seccion {
+  display: inline-block;
+  background: rgba(10, 110, 189, .1);
+  color: var(--color-oceano);
+  font-weight: 600;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.btn--cta {
+  background: var(--color-coral);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .65rem 1.6rem;
+  transition: var(--transicion);
+  box-shadow: 0 8px 18px rgba(255, 122, 89, .35);
+}
+.btn--cta:hover, .btn--cta:focus {
+  background: var(--color-coral-os);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.barra-navegacion {
+  background: var(--color-noche);
+  box-shadow: 0 4px 16px rgba(0,0,0,.18);
+}
+.barra-navegacion .navbar-brand { font-size: 1.4rem; }
+.barra-navegacion .nav-link { font-weight: 500; position: relative; }
+.barra-navegacion .nav-link.active:not(.btn) { color: #fff; }
+.barra-navegacion .nav-link.active:not(.btn)::after {
+  content: "";
+  position: absolute;
+  left: .8rem; right: .8rem; bottom: .1rem;
+  height: 2px;
+  background: var(--color-coral);
+  border-radius: 2px;
+}
+
+/* ============================================================
+   ENCABEZADO INTERNO DE PÁGINA
+   ============================================================ */
+.encabezado-pagina {
+  background: linear-gradient(160deg, rgba(11,37,69,.85), rgba(10,110,189,.7)),
+              url('../img/costa-aerea.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 7rem 1rem 3.5rem;
+}
+.encabezado-pagina h1 { font-weight: 700; }
+.encabezado-pagina p { color: rgba(255,255,255,.85); max-width: 620px; margin: .5rem auto 0; }
+
+/* ============================================================
+   HERO (index)
+   ============================================================ */
+.hero-seccion {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: url('../img/ruta_panoramica.png') center/cover no-repeat;
+}
+.hero-seccion__overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(160deg, rgba(11,37,69,.82), rgba(10,110,189,.55));
+}
+.hero-seccion__texto { max-width: 640px; font-size: 1.2rem; }
+
+/* ============================================================
+   TARJETAS DE PASO / BENEFICIOS
+   ============================================================ */
+.tarjeta-paso {
+  background: #fff;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion);
+}
+.tarjeta-paso:hover { transform: translateY(-6px); }
+.tarjeta-paso__numero {
+  display: inline-grid; place-items: center;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-oceano), var(--color-coral));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem; font-weight: 700;
+}
+
+.grilla-beneficios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.tarjeta-beneficio {
+  background: var(--color-arena);
+  border: 1px solid #e3ecf5;
+  border-radius: var(--radio);
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  transition: var(--transicion);
+}
+.tarjeta-beneficio:hover {
+  border-color: var(--color-oceano);
+  box-shadow: var(--sombra);
+  transform: translateY(-4px);
+}
+.tarjeta-beneficio__icono { font-size: 2.4rem; margin-bottom: .6rem; }
+
+/* ============================================================
+   INSTITUCIONAL
+   ============================================================ */
+.lista-valores { list-style: none; padding: 0; margin-top: 1.2rem; }
+.lista-valores li { margin-bottom: .6rem; }
+.lista-valores i { color: var(--color-oceano); margin-right: .4rem; }
+
+.bloque-problema {
+  background: var(--color-arena);
+  border-left: 5px solid var(--color-coral);
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem;
+}
+
+/* ============================================================
+   VIAJES — filtro + tarjetas
+   ============================================================ */
+.filtros-destino { text-align: center; }
+.filtro-btn {
+  border: 1px solid var(--color-oceano);
+  color: var(--color-oceano);
+  background: transparent;
+  border-radius: 999px;
+  margin: .2rem;
+  padding: .4rem 1.2rem;
+  font-weight: 500;
+  transition: var(--transicion);
+}
+.filtro-btn:hover { background: rgba(10,110,189,.1); }
+.filtro-btn.activo { background: var(--color-oceano); color: #fff; }
+
+.tarjeta-viaje {
+  background: #fff;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform var(--transicion);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.tarjeta-viaje:hover { transform: translateY(-6px); }
+.tarjeta-viaje__top {
+  background: linear-gradient(135deg, var(--color-oceano), var(--color-oceano-os));
+  color: #fff;
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tarjeta-viaje__destino { font-family: 'Poppins'; font-weight: 600; font-size: 1.15rem; }
+.tarjeta-viaje__fecha { background: rgba(255,255,255,.2); padding: .15rem .6rem; border-radius: 999px; font-size: .8rem; }
+.tarjeta-viaje__body { padding: 1.2rem; flex: 1; }
+.tarjeta-viaje__ruta { font-weight: 600; color: var(--color-noche); }
+.tarjeta-viaje__detalles { list-style: none; padding: 0; margin: .8rem 0 0; font-size: .9rem; color: #5b7186; }
+.tarjeta-viaje__detalles li { padding: .15rem 0; }
+.tarjeta-viaje__detalles i { color: var(--color-oceano); margin-right: .4rem; }
+.tarjeta-viaje__footer {
+  border-top: 1px solid #eef3f8;
+  padding: .9rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tarjeta-viaje__conductor { font-weight: 600; }
+
+/* ============================================================
+   GALERÍA (grid + GLightbox)
+   ============================================================ */
+.grilla-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+.tarjeta-galeria {
+  position: relative;
+  display: block;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+.tarjeta-galeria img {
+  width: 100%; height: 240px;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.tarjeta-galeria:hover img { transform: scale(1.08); }
+.tarjeta-galeria__pie {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: .8rem 1rem;
+  color: #fff; font-weight: 600;
+  background: linear-gradient(transparent, rgba(11,37,69,.85));
+}
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+.formulario-contacto .form-control:focus,
+.formulario-contacto .form-select:focus {
+  border-color: var(--color-oceano);
+  box-shadow: 0 0 0 .2rem rgba(10,110,189,.2);
+}
+.caja-mapa { background: #fff; }
+.caja-mapa i { color: var(--color-oceano); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.pie-pagina { background: var(--color-noche); }
+.pie-pagina__links a, .pie-pagina__redes a {
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  transition: color var(--transicion);
+}
+.pie-pagina__links a:hover { color: var(--color-coral); }
+.pie-pagina__links li { margin-bottom: .4rem; }
+.pie-pagina__redes { display: flex; gap: 1rem; font-size: 1.4rem; }
+.pie-pagina__redes a:hover { color: var(--color-coral); transform: translateY(-3px); }
+
+/* ============================================================
+   BOTÓN VOLVER ARRIBA
+   ============================================================ */
+.boton-arriba {
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  width: 48px; height: 48px;
+  border: none; border-radius: 50%;
+  background: var(--color-coral);
+  color: #fff; font-size: 1.2rem;
+  box-shadow: 0 8px 18px rgba(255,122,89,.4);
+  opacity: 0; visibility: hidden;
+  transition: var(--transicion);
+  z-index: 1000;
+}
+.boton-arriba.visible { opacity: 1; visibility: visible; }
+.boton-arriba:hover { background: var(--color-coral-os); transform: translateY(-3px); }
+
+@media (max-width: 575px) {
+  .encabezado-pagina { padding-top: 6rem; }
+  .tarjeta-galeria img { height: 210px; }
+}

@@ -1,0 +1,218 @@
+/* ============================================================
+   Portfolio · Agustín Espina — CSS NATIVO
+   Plantilla base personalizada con identidad propia.
+   Paleta: violeta/índigo tech + acento turquesa.
+   ============================================================ */
+
+:root {
+  --bg-noche:    #0e1230;   /* fondo oscuro */
+  --bg-noche-2:  #161b45;
+  --violeta:     #6c5ce7;   /* primario */
+  --acento:      #00d4b8;   /* turquesa acento */
+  --acento-os:   #00b29c;
+  --texto:       #2b2d42;
+  --gris:        #6b7280;
+  --radio:       18px;
+  --transicion:  .3s ease;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--texto);
+  scroll-behavior: smooth;
+}
+h1, h2, h3, .navbar-brand { font-family: 'Sora', sans-serif; }
+section { scroll-margin-top: 70px; }
+
+/* ---------- Reutilizables ---------- */
+.etiqueta-portfolio {
+  display: inline-block;
+  color: var(--acento);
+  font-weight: 600;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: .6rem;
+}
+.btn--acento {
+  background: var(--acento);
+  border: none;
+  color: #04201c;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .65rem 1.7rem;
+  transition: var(--transicion);
+  box-shadow: 0 8px 20px rgba(0, 212, 184, .35);
+}
+.btn--acento:hover, .btn--acento:focus {
+  background: var(--acento-os);
+  transform: translateY(-2px);
+  color: #04201c;
+}
+.seccion-oscura { background: var(--bg-noche); }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.barra-portfolio {
+  background: transparent;
+  transition: var(--transicion);
+  padding-block: 1rem;
+}
+.barra-portfolio.scrolled {
+  background: rgba(14, 18, 48, .95);
+  backdrop-filter: blur(8px);
+  padding-block: .5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,.3);
+}
+.barra-portfolio .navbar-brand { color: var(--acento); font-size: 1.5rem; letter-spacing: .05em; }
+.barra-portfolio .nav-link { font-weight: 500; position: relative; }
+.barra-portfolio .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: .8rem; right: .8rem; bottom: .15rem;
+  height: 2px; background: var(--acento); border-radius: 2px;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero-portfolio {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, #232a6b 0, var(--bg-noche) 55%);
+  overflow: hidden;
+}
+.hero-portfolio__overlay {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 30%, rgba(108,92,231,.35), transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(0,212,184,.25), transparent 45%);
+}
+.hero-portfolio__saludo { color: var(--acento); font-weight: 600; letter-spacing: .1em; margin-bottom: .2rem; }
+.hero-portfolio__bio { max-width: 540px; color: rgba(255,255,255,.8); }
+.hero-portfolio h2 span { color: var(--acento); }
+.hero-portfolio__avatar {
+  width: 260px; height: 260px;
+  margin: 0 auto;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  font-family: 'Sora'; font-size: 5rem; font-weight: 700; color: #fff;
+  background: linear-gradient(135deg, var(--violeta), var(--acento));
+  box-shadow: 0 20px 50px rgba(108,92,231,.45);
+  animation: flotar 4s ease-in-out infinite;
+}
+@keyframes flotar { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+.hero-portfolio__redes a {
+  color: #fff; font-size: 1.6rem; margin-right: 1.1rem;
+  transition: var(--transicion); display: inline-block;
+}
+.hero-portfolio__redes a:hover { color: var(--acento); transform: translateY(-4px); }
+
+/* ============================================================
+   SOBRE MÍ
+   ============================================================ */
+.imagen-perfil { transition: var(--transicion); }
+.imagen-perfil:hover { transform: scale(1.02); }
+.dato-numero {
+  font-family: 'Sora'; font-size: 2.2rem; font-weight: 700;
+  color: var(--violeta); display: block;
+}
+
+/* ============================================================
+   HABILIDADES
+   ============================================================ */
+.grilla-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.2rem;
+}
+.tarjeta-skill {
+  background: var(--bg-noche-2);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radio);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #fff;
+  transition: var(--transicion);
+}
+.tarjeta-skill i { font-size: 2.4rem; color: var(--acento); display: block; margin-bottom: .5rem; }
+.tarjeta-skill span { font-weight: 500; }
+.tarjeta-skill:hover { transform: translateY(-6px); border-color: var(--acento); box-shadow: 0 12px 26px rgba(0,212,184,.2); }
+
+.barra-skill { display: flex; justify-content: space-between; color: #fff; margin-bottom: .35rem; font-weight: 500; }
+.seccion-oscura .progress { background: rgba(255,255,255,.1); height: 10px; border-radius: 999px; }
+.seccion-oscura .progress-bar { background: linear-gradient(90deg, var(--violeta), var(--acento)); border-radius: 999px; }
+
+/* ============================================================
+   PROYECTOS
+   ============================================================ */
+.tarjeta-proyecto {
+  background: #fff;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(14,18,48,.1);
+  transition: var(--transicion);
+}
+.tarjeta-proyecto:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(14,18,48,.18); }
+.tarjeta-proyecto img { width: 100%; height: 200px; object-fit: cover; cursor: zoom-in; transition: transform .5s ease; }
+.tarjeta-proyecto:hover img { transform: scale(1.06); }
+.tarjeta-proyecto__cuerpo { padding: 1.3rem; }
+.badge-tec {
+  display: inline-block;
+  background: rgba(108,92,231,.12);
+  color: var(--violeta);
+  font-size: .72rem; font-weight: 600;
+  padding: .2rem .7rem; border-radius: 999px; margin-bottom: .5rem;
+}
+.tarjeta-proyecto__links a {
+  color: var(--violeta); text-decoration: none; font-weight: 600; font-size: .9rem;
+  transition: var(--transicion);
+}
+.tarjeta-proyecto__links a:hover { color: var(--acento-os); }
+
+/* ============================================================
+   FORMULARIO
+   ============================================================ */
+.formulario-portfolio {
+  background: var(--bg-noche-2);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.formulario-portfolio .form-label { color: rgba(255,255,255,.85); font-weight: 500; }
+.formulario-portfolio .form-control {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.15);
+  color: #fff;
+}
+.formulario-portfolio .form-control::placeholder { color: rgba(255,255,255,.4); }
+.formulario-portfolio .form-control:focus {
+  background: rgba(255,255,255,.08);
+  border-color: var(--acento);
+  box-shadow: 0 0 0 .2rem rgba(0,212,184,.2);
+  color: #fff;
+}
+
+/* ============================================================
+   FOOTER + BOTÓN ARRIBA
+   ============================================================ */
+.pie-portfolio { background: #090c24; }
+.boton-arriba {
+  position: fixed;
+  bottom: 1.5rem; right: 1.5rem;
+  width: 48px; height: 48px;
+  border: none; border-radius: 50%;
+  background: var(--acento);
+  color: #04201c; font-size: 1.2rem;
+  box-shadow: 0 8px 18px rgba(0,212,184,.4);
+  opacity: 0; visibility: hidden;
+  transition: var(--transicion);
+  z-index: 1000;
+}
+.boton-arriba.visible { opacity: 1; visibility: visible; }
+.boton-arriba:hover { background: var(--acento-os); transform: translateY(-3px); }
+
+@media (max-width: 575px) {
+  .hero-portfolio h1 { font-size: 2.6rem; }
+}

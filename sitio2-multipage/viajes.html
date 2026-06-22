@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajes disponibles — VoyConVos | Carpooling a la costa</title>
+  <meta name="description" content="Encontrá viajes compartidos disponibles hacia Mar del Plata, Pinamar, Villa Gesell y toda la costa argentina. Filtrá por destino y sumate.">
+  <meta name="author" content="VoyConVos">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top barra-navegacion" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-car-front-fill"></i> VoyConVos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="viajes.html">Viajes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link btn btn--cta ms-lg-3 px-3" href="contacto.html">Sumarme</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="encabezado-pagina">
+      <div class="container">
+        <h1>Viajes disponibles</h1>
+        <p>Encontrá tu viaje a la costa y sumate a la red. Filtrá por destino.</p>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <!-- Filtros (interacción JS) -->
+        <div class="filtros-destino mb-4" data-aos="fade-up">
+          <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+          <button class="filtro-btn" data-filtro="mardelplata">Mar del Plata</button>
+          <button class="filtro-btn" data-filtro="pinamar">Pinamar</button>
+          <button class="filtro-btn" data-filtro="villagesell">Villa Gesell</button>
+          <button class="filtro-btn" data-filtro="miramar">Miramar</button>
+          <button class="filtro-btn" data-filtro="necochea">Necochea</button>
+        </div>
+
+        <div class="row g-4">
+          <!-- Viaje 1 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="mardelplata" data-aos="fade-up">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Mar del Plata</span><span class="tarjeta-viaje__fecha">3 Ene</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">Buenos Aires → Mar del Plata</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 07:00 desde Constitución</li>
+                  <li><i class="bi bi-people"></i> 3 asientos disponibles</li>
+                  <li><i class="bi bi-car-front"></i> Chevrolet Onix gris</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $30.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Juan M.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+          <!-- Viaje 2 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="pinamar" data-aos="fade-up" data-aos-delay="100">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Pinamar</span><span class="tarjeta-viaje__fecha">10 Ene</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">La Plata → Pinamar</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 06:30 desde La Plata centro</li>
+                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
+                  <li><i class="bi bi-car-front"></i> Ford Ka rojo</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $25.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Carla S.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+          <!-- Viaje 3 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="miramar" data-aos="fade-up" data-aos-delay="200">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Miramar</span><span class="tarjeta-viaje__fecha">17 Ene</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">La Plata → Miramar</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 08:00 desde La Plata centro</li>
+                  <li><i class="bi bi-people"></i> 1 asiento disponible</li>
+                  <li><i class="bi bi-car-front"></i> Volkswagen Gol blanco</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $29.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Rodrigo P.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+          <!-- Viaje 4 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="mardelplata" data-aos="fade-up">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Mar del Plata</span><span class="tarjeta-viaje__fecha">24 Ene</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">Rosario → Mar del Plata</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 07:00 desde Rosario centro</li>
+                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
+                  <li><i class="bi bi-car-front"></i> Renault Kangoo azul</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $50.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Ana L.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+          <!-- Viaje 5 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="pinamar" data-aos="fade-up" data-aos-delay="100">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Pinamar</span><span class="tarjeta-viaje__fecha">31 Ene</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">Mar del Plata → Pinamar</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 09:00 desde Mar del Plata</li>
+                  <li><i class="bi bi-people"></i> 3 asientos disponibles</li>
+                  <li><i class="bi bi-car-front"></i> Toyota Corolla negro</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $9.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Martín G.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+          <!-- Viaje 6 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="necochea" data-aos="fade-up" data-aos-delay="200">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Necochea</span><span class="tarjeta-viaje__fecha">7 Feb</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">Bahía Blanca → Necochea</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 08:00 desde Bahía Blanca</li>
+                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
+                  <li><i class="bi bi-car-front"></i> Peugeot 208 blanco</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $10.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Sofía R.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+          <!-- Viaje 7 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="villagesell" data-aos="fade-up">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Villa Gesell</span><span class="tarjeta-viaje__fecha">14 Feb</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">Mar del Plata → Villa Gesell</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 10:00 desde Mar del Plata</li>
+                  <li><i class="bi bi-people"></i> 2 asientos disponibles</li>
+                  <li><i class="bi bi-car-front"></i> Honda City plata</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $8.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Lucas F.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+          <!-- Viaje 8 -->
+          <div class="col-md-6 col-lg-4 col-viaje" data-destino="villagesell" data-aos="fade-up" data-aos-delay="100">
+            <article class="tarjeta-viaje">
+              <div class="tarjeta-viaje__top"><span class="tarjeta-viaje__destino">Villa Gesell</span><span class="tarjeta-viaje__fecha">21 Feb</span></div>
+              <div class="tarjeta-viaje__body">
+                <p class="tarjeta-viaje__ruta">Buenos Aires → Villa Gesell</p>
+                <ul class="tarjeta-viaje__detalles">
+                  <li><i class="bi bi-clock"></i> Salida 06:00 desde Liniers</li>
+                  <li><i class="bi bi-people"></i> 3 asientos disponibles</li>
+                  <li><i class="bi bi-car-front"></i> Fiat Cronos rojo</li>
+                  <li><i class="bi bi-cash-coin"></i> Aporte $28.000 por persona</li>
+                </ul>
+              </div>
+              <div class="tarjeta-viaje__footer"><span class="tarjeta-viaje__conductor"><i class="bi bi-person-circle"></i> Valentina R.</span><a href="contacto.html" class="btn btn-sm btn--cta">Contactar</a></div>
+            </article>
+          </div>
+        </div>
+        <p class="text-center text-muted mt-4 sin-resultados" hidden>No hay viajes disponibles para este destino por el momento.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h2 class="h5 fw-bold"><i class="bi bi-car-front-fill"></i> VoyConVos</h2>
+          <p class="text-white-50">Carpooling solidario hacia la costa argentina.</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="h6">Navegación</h3>
+          <ul class="list-unstyled pie-pagina__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="viajes.html">Viajes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h6">Seguinos</h3>
+          <div class="pie-pagina__redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center text-white-50 mb-0 small">&copy; 2026 VoyConVos · Trabajo Final — Diseño y Desarrollo Web</p>
+    </div>
+  </footer>
+
+  <button id="btnArriba" class="boton-arriba" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

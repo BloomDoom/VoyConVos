@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoyConVos — Viajes compartidos a la costa argentina</title>
+  <meta name="description" content="VoyConVos conecta viajeros y conductores para compartir viajes a la costa argentina: más económico, sustentable y solidario. Inicio.">
+  <meta name="keywords" content="viajes compartidos, carpooling, costa argentina, compartir auto">
+  <meta name="author" content="VoyConVos">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top barra-navegacion" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-car-front-fill"></i> VoyConVos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
+            <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="viajes.html">Viajes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link btn btn--cta ms-lg-3 px-3" href="contacto.html">Sumarme</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero-seccion">
+      <div class="hero-seccion__overlay"></div>
+      <div class="container position-relative text-center" data-aos="fade-up">
+        <h1 class="display-4 fw-bold mb-3">Compartí el camino a la costa</h1>
+        <p class="lead mx-auto mb-4 hero-seccion__texto">
+          Conectamos viajeros que necesitan llegar con conductores que tienen lugar.
+          Más económico, más sustentable y mejor en compañía.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="viajes.html" class="btn btn-lg btn--cta">Ver viajes disponibles</a>
+          <a href="contacto.html" class="btn btn-lg btn-outline-light">Ofrecé tu auto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CÓMO FUNCIONA ===== -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-2" data-aos="fade-up">¿Cómo funciona?</h2>
+        <p class="text-center text-muted mb-5" data-aos="fade-up">Tres pasos para empezar a viajar acompañado</p>
+        <div class="row g-4">
+          <article class="col-md-4" data-aos="fade-up">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">1</span>
+              <h3 class="h5 mt-3">Buscás tu viaje</h3>
+              <p class="text-muted mb-0">Explorá los viajes disponibles hacia tu destino en la costa y elegí el tuyo.</p>
+            </div>
+          </article>
+          <article class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">2</span>
+              <h3 class="h5 mt-3">Te conectás</h3>
+              <p class="text-muted mb-0">Contactás al conductor, coordinan el punto de encuentro y los detalles.</p>
+            </div>
+          </article>
+          <article class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="tarjeta-paso h-100 text-center p-4">
+              <span class="tarjeta-paso__numero">3</span>
+              <h3 class="h5 mt-3">Viajás y ahorrás</h3>
+              <p class="text-muted mb-0">Compartís gastos de combustible y peajes. Todos ganan.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BANNER INTERMEDIO ===== -->
+    <section class="py-5 text-center text-white" style="background: linear-gradient(135deg, var(--color-oceano), var(--color-coral));">
+      <div class="container" data-aos="zoom-in">
+        <h2 class="fw-bold">El viaje es mejor en compañía</h2>
+        <p class="mb-4">Miles de personas ya viajan juntas hacia la costa. Sumate a la red.</p>
+        <a href="contacto.html" class="btn btn-lg btn-light fw-semibold">Unirme ahora</a>
+      </div>
+    </section>
+
+    <!-- ===== BENEFICIOS ===== -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="etiqueta-seccion">Beneficios</span>
+          <h2 class="fw-bold">¿Por qué VoyConVos?</h2>
+        </div>
+        <div class="grilla-beneficios">
+          <article class="tarjeta-beneficio" data-aos="zoom-in"><div class="tarjeta-beneficio__icono">💰</div><h3 class="h6">Económico</h3><p>Compartís gastos de combustible y peajes entre todos.</p></article>
+          <article class="tarjeta-beneficio" data-aos="zoom-in" data-aos-delay="100"><div class="tarjeta-beneficio__icono">🌿</div><h3 class="h6">Sustentable</h3><p>Menos autos en la ruta, menor emisión de CO₂.</p></article>
+          <article class="tarjeta-beneficio" data-aos="zoom-in" data-aos-delay="200"><div class="tarjeta-beneficio__icono">🤝</div><h3 class="h6">Solidario</h3><p>Una comunidad de viajeros que se ayudan a llegar.</p></article>
+          <article class="tarjeta-beneficio" data-aos="zoom-in" data-aos-delay="300"><div class="tarjeta-beneficio__icono">🆓</div><h3 class="h6">Sin fines de lucro</h3><p>Plataforma gratuita: no cobramos comisión.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (incluido en cada página) ===== -->
+  <footer class="pie-pagina text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h2 class="h5 fw-bold"><i class="bi bi-car-front-fill"></i> VoyConVos</h2>
+          <p class="text-white-50">Carpooling solidario hacia la costa argentina. Compartí el camino, los gastos y el viaje.</p>
+        </div>
+        <div class="col-md-3">
+          <h3 class="h6">Navegación</h3>
+          <ul class="list-unstyled pie-pagina__links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="viajes.html">Viajes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="h6">Seguinos</h3>
+          <div class="pie-pagina__redes">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="text-center text-white-50 mb-0 small">&copy; 2026 VoyConVos · Trabajo Final — Diseño y Desarrollo Web</p>
+    </div>
+  </footer>
+
+  <button id="btnArriba" class="boton-arriba" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

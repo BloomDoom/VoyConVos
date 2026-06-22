@@ -1,0 +1,16 @@
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependencias / build (por si más adelante se usa npm)
+node_modules/
+dist/
+
+# Netlify
+.netlify/

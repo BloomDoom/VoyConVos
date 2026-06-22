@@ -11,6 +11,21 @@ y los gastos.
 
 ---
 
+## 🔗 Enlaces del proyecto
+
+| Recurso | URL |
+|---|---|
+| 🌐 **Sitio 1 — One Page** | <https://voyconvos-onepage.netlify.app/> |
+| 🌐 **Sitio 2 — Multi Page** | <https://voyconvos-multipage.netlify.app/> |
+| 🌐 **Sitio 3 — Portfolio** | <https://voyconvos-portfolio.netlify.app/> |
+| 💻 **Repositorio (GitHub)** | <https://github.com/BloomDoom/VoyConVos> |
+| 📊 **Panel de Netlify** | <https://app.netlify.com/> |
+| ✉️ **Panel de EmailJS** | <https://dashboard.emailjs.com/> |
+
+> Cada `git push` a la rama `main` redespliega automáticamente los 3 sitios en Netlify.
+
+---
+
 ## 📂 Estructura
 
 ```
@@ -51,8 +66,8 @@ TrabajoFinal/
 ### Sitio 1 — One Page
 Una sola página `index.html` · HTML semántico (`header/nav/section/article/footer`) ·
 +5 clases CSS propias · Bootstrap (CDN) · interacciones JS (menú responsive, slider Swiper,
-filtro de destinos, contadores, alertas) · +5 plugins · secciones **Inicio, Institucional,
-Galería, Destinos/Categorías, Contacto** · formulario + **mapa embebido**.
+animaciones al scroll, alertas del formulario) · +5 plugins · secciones **Inicio, Institucional,
+Galería, Destinos, Contacto** · formulario + **mapa embebido**.
 
 ### Sitio 2 — Multi Page
 Organización en carpetas `/css /js /img` con rutas relativas · 5 páginas enlazadas ·
@@ -70,40 +85,38 @@ contenido mínimo: **presentación, habilidades, proyectos, contacto, redes** ·
 
 ---
 
-## ✉️ Configurar EmailJS (formulario real)
+## ✉️ EmailJS (formulario real)
 
-Los formularios funcionan en **modo DEMO** sin configuración (muestran el mensaje de éxito).
-Para enviar correos reales:
+✅ **Ya configurado** — los formularios de los 3 sitios envían correos reales mediante
+EmailJS (servicio Gmail). La configuración vive en cada `js/main.js`:
 
-1. Creá una cuenta gratis en <https://www.emailjs.com/>.
-2. **Email Services** → conectá tu correo → copiá el **Service ID**.
-3. **Email Templates** → creá una plantilla con variables `{{nombre}}`, `{{email}}`,
-   `{{telefono}}`, `{{destino}}`, `{{mensaje}}` → copiá el **Template ID**.
-4. **Account** → copiá tu **Public Key**.
-5. En cada `js/main.js`, reemplazá:
-   ```js
-   const EMAILJS_CONFIG = {
-     PUBLIC_KEY:  "tu_public_key",
-     SERVICE_ID:  "tu_service_id",
-     TEMPLATE_ID: "tu_template_id"
-   };
-   ```
-   Los `name` de los inputs ya coinciden con las variables sugeridas.
+```js
+const EMAILJS_CONFIG = {
+  PUBLIC_KEY:  "...",
+  SERVICE_ID:  "...",
+  TEMPLATE_ID: "..."
+};
+```
+
+Si en el futuro cambian las credenciales, se editan esos 3 valores (Public Key en
+**Account**, Service ID en **Email Services**, Template ID en **Email Templates** del
+panel de EmailJS). Los `name` de los inputs coinciden con las variables del template
+(`{{nombre}}`, `{{email}}`, `{{telefono}}`, `{{rol}}`, `{{destino}}`, `{{asunto}}`, `{{mensaje}}`).
 
 ---
 
 ## 🚀 Despliegue en Netlify (gratis)
 
-**Opción rápida (drag & drop):**
-1. Entrá a <https://app.netlify.com/drop>.
-2. Arrastrá **cada carpeta de sitio por separado** (`sitio1-onepage`, etc.).
-3. Netlify te da una URL pública por sitio. Listo.
+✅ **Ya desplegado.** Los 3 sitios viven en este mismo repo y están conectados a Netlify
+(GitHub → Netlify). Cada uno es un sitio de Netlify que apunta a su subcarpeta:
 
-**Opción Git:** subí cada sitio a un repo y conectalo en Netlify
-(*Build command:* vacío · *Publish directory:* raíz del sitio).
+| Sitio | Publish directory | Build command | URL |
+|---|---|---|---|
+| Sitio 1 | `sitio1-onepage` | *(vacío)* | <https://voyconvos-onepage.netlify.app/> |
+| Sitio 2 | `sitio2-multipage` | *(vacío)* | <https://voyconvos-multipage.netlify.app/> |
+| Sitio 3 | `sitio3-portfolio` | *(vacío)* | <https://voyconvos-portfolio.netlify.app/> |
 
-> El proyecto base *VoyConVos* ya está publicado en GitHub Pages:
-> <https://github.com/BloomDoom/VoyConVos>
+Cada `git push` a `main` dispara un redeploy automático de los 3 sitios.
 
 ---
 
@@ -117,6 +130,10 @@ python -m http.server 5500
 ```
 
 ## 🎨 Créditos
-- Imágenes: Unsplash (libres de uso).
+- **Fotos de los destinos** (Mar del Plata, Pinamar, Villa Gesell, Miramar, Necochea,
+  Mar de las Pampas): Wikimedia Commons, licencias libres (CC / dominio público).
+  Detalle en [`CREDITOS-IMAGENES.md`](CREDITOS-IMAGENES.md).
+- Foto del hero: Ruta 11 (tramo Villa Gesell–Cariló).
+- Imágenes genéricas de autos/rutas/viajeros: stock de uso libre.
 - Librerías vía CDN: Bootstrap, Bootstrap Icons, AOS, Swiper, GLightbox, Typed.js, EmailJS.
 - Tipografías: Google Fonts (Poppins, Inter, Sora).

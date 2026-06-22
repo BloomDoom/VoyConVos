@@ -6,9 +6,9 @@
    Reemplazá por tus credenciales; si las dejás como "TU_...",
    el formulario funciona en modo DEMO. */
 const EMAILJS_CONFIG = {
-  PUBLIC_KEY:  "TU_PUBLIC_KEY",
-  SERVICE_ID:  "TU_SERVICE_ID",
-  TEMPLATE_ID: "TU_TEMPLATE_ID"
+  PUBLIC_KEY:  "zgNsECSJFeH7QkXrd",
+  SERVICE_ID:  "service_9rbtvwh",
+  TEMPLATE_ID: "template_2bsqksf"
 };
 
 document.addEventListener('DOMContentLoaded', () => {

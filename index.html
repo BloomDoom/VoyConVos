@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoyConVos — Trabajo Final · Agustín Espina</title>
+  <meta name="description" content="Trabajo Final de Diseño y Desarrollo Web: tres sitios (One Page, Multi Page y Portfolio) por Agustín Espina.">
+  <style>
+    :root { --acento: #16d3b0; --fondo: #0e1230; --tarjeta: #171c44; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at 20% 0%, #1b2257, var(--fondo) 60%);
+      color: #eef1ff; min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 4rem 1.25rem;
+    }
+    .marca { color: var(--acento); font-weight: 700; letter-spacing: .05em; font-size: 1.4rem; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: .6rem 0 .4rem; text-align: center; }
+    .sub { color: #9aa3d4; text-align: center; max-width: 40rem; margin-bottom: 3rem; }
+    .grid { display: grid; gap: 1.5rem; width: 100%; max-width: 60rem;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+    .tarjeta {
+      background: var(--tarjeta); border: 1px solid #2a3170; border-radius: 1rem;
+      padding: 1.75rem; text-decoration: none; color: inherit;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+      display: flex; flex-direction: column; gap: .5rem;
+    }
+    .tarjeta:hover { transform: translateY(-5px); border-color: var(--acento);
+                     box-shadow: 0 12px 28px rgba(0,0,0,.4); }
+    .tarjeta .n { color: var(--acento); font-size: .8rem; font-weight: 700; letter-spacing: .08em; }
+    .tarjeta h2 { font-size: 1.25rem; }
+    .tarjeta p { color: #9aa3d4; font-size: .9rem; }
+    .tarjeta .ir { margin-top: .75rem; color: var(--acento); font-weight: 600; font-size: .9rem; }
+    footer { margin-top: 3.5rem; color: #6f78ad; font-size: .85rem; text-align: center; }
+    footer a { color: var(--acento); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <span class="marca">&lt;AE/&gt;</span>
+  <h1>VoyConVos · Trabajo Final</h1>
+  <p class="sub">Diseño y Desarrollo Web — tres sitios sobre viajes compartidos a la costa, por Agustín Espina.</p>
+
+  <main class="grid">
+    <a class="tarjeta" href="sitio1-onepage/">
+      <span class="n">SITIO 1</span>
+      <h2>One Page</h2>
+      <p>Landing de una sola página con presentación, servicios y contacto.</p>
+      <span class="ir">Ver sitio →</span>
+    </a>
+    <a class="tarjeta" href="sitio2-multipage/">
+      <span class="n">SITIO 2</span>
+      <h2>Multi Page</h2>
+      <p>Sitio multipágina: institucional, viajes, galería y contacto.</p>
+      <span class="ir">Ver sitio →</span>
+    </a>
+    <a class="tarjeta" href="sitio3-portfolio/">
+      <span class="n">SITIO 3</span>
+      <h2>Portfolio</h2>
+      <p>Portfolio profesional con identidad propia, animaciones y formulario.</p>
+      <span class="ir">Ver sitio →</span>
+    </a>
+  </main>
+
+  <footer>
+    © 2026 Agustín Espina ·
+    <a href="https://github.com/BloomDoom/VoyConVos">Repositorio en GitHub</a>
+  </footer>
+</body>
+</html>

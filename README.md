@@ -17,7 +17,7 @@ y los gastos.
 |---|---|
 | 🌐 **Sitio 1 — One Page** | <https://voyconvos-onepage.netlify.app/> |
 | 🌐 **Sitio 2 — Multi Page** | <https://voyconvos-multipage.netlify.app/> |
-| 🌐 **Sitio 3 — Portfolio** | <https://voyconvos-portfolio.netlify.app/> |
+| 🌐 **Sitio 3 — Portfolio** | <https://espina-portfolio.netlify.app/> |
 | 💻 **Repositorio (GitHub)** | <https://github.com/BloomDoom/VoyConVos> |
 | 📊 **Panel de Netlify** | <https://app.netlify.com/> |
 | ✉️ **Panel de EmailJS** | <https://dashboard.emailjs.com/> |
@@ -114,7 +114,7 @@ panel de EmailJS). Los `name` de los inputs coinciden con las variables del temp
 |---|---|---|---|
 | Sitio 1 | `sitio1-onepage` | *(vacío)* | <https://voyconvos-onepage.netlify.app/> |
 | Sitio 2 | `sitio2-multipage` | *(vacío)* | <https://voyconvos-multipage.netlify.app/> |
-| Sitio 3 | `sitio3-portfolio` | *(vacío)* | <https://voyconvos-portfolio.netlify.app/> |
+| Sitio 3 | `sitio3-portfolio` | *(vacío)* | <https://espina-portfolio.netlify.app/> |
 
 Cada `git push` a `main` dispara un redeploy automático de los 3 sitios.
 

@@ -15,11 +15,11 @@ y los gastos.
 
 | Recurso | URL |
 |---|---|
-| 🌐 **Sitio 1 — One Page** | <https://voyconvos-onepage.netlify.app/> |
-| 🌐 **Sitio 2 — Multi Page** | <https://voyconvos-multipage.netlify.app/> |
-| 🌐 **Sitio 3 — Portfolio** | <https://espina-portfolio.netlify.app/> |
+| 🌐 **Sitio 1 — One Page** | <https://bloomdoom.github.io/VoyConVos/sitio1-onepage/> |
+| 🌐 **Sitio 2 — Multi Page** | <https://bloomdoom.github.io/VoyConVos/sitio2-multipage/> |
+| 🌐 **Sitio 3 — Portfolio** | <https://bloomdoom.github.io/VoyConVos/sitio3-portfolio/> |
 | 💻 **Repositorio (GitHub)** | <https://github.com/BloomDoom/VoyConVos> |
-| 📊 **Panel de Netlify** | <https://app.netlify.com/> |
+| 📊 **Landing URL** | <https://app.netlify.com](https://bloomdoom.github.io/VoyConVos)/> |
 | ✉️ **Panel de EmailJS** | <https://dashboard.emailjs.com/> |
 
 > Cada `git push` a la rama `main` redespliega automáticamente los 3 sitios en Netlify.

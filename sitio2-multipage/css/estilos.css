@@ -272,6 +272,7 @@ main { min-height: 60vh; }
 }
 .pie-pagina__links a:hover { color: var(--color-coral); }
 .pie-pagina__links li { margin-bottom: .5rem; }
+.pie-pagina__desc { max-width: 460px; }
 /* Barra inferior: ancho completo del viewport y tono más oscuro bajo el corte */
 .pie-pagina__barra {
   background: rgba(0,0,0,.32);

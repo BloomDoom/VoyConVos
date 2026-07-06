@@ -169,6 +169,16 @@ section { scroll-margin-top: 70px; }
 .tarjeta-proyecto:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(14,18,48,.18); }
 .tarjeta-proyecto img { width: 100%; height: 200px; object-fit: cover; cursor: zoom-in; transition: transform .5s ease; }
 .tarjeta-proyecto:hover img { transform: scale(1.06); }
+/* Tarjeta CTA "Dale vida a tu proyecto": portada con degradé + icono
+   (misma altura que las capturas para mantener la simetría de la grilla) */
+.tarjeta-cta__cover {
+  height: 200px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--violeta), var(--acento));
+  color: #fff;
+}
+.tarjeta-cta__cover i { font-size: 4rem; transition: transform .5s ease; }
+.tarjeta-cta:hover .tarjeta-cta__cover i { transform: scale(1.12) rotate(-8deg); }
 .tarjeta-proyecto__cuerpo { padding: 1.3rem; }
 .badge-tec {
   display: inline-block;

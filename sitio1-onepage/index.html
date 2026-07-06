@@ -40,7 +40,7 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navPrincipal" data-bs-offset="90" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#navPrincipal" data-bs-root-margin="-45% 0px -45%" data-bs-smooth-scroll="true" tabindex="0">
 
   <!-- ============================================================
        ENCABEZADO + NAVEGACIÓN (semántico: header > nav)
@@ -48,8 +48,12 @@
   <header>
     <nav id="navPrincipal" class="navbar navbar-expand-lg navbar-dark fixed-top barra-navegacion" aria-label="Navegación principal">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#inicio">
-          <i class="bi bi-car-front-fill"></i> VoyConVos
+        <a class="navbar-brand fw-bold logo-vcv d-inline-flex align-items-center gap-2" href="#inicio">
+          <svg class="logo-vcv__mark" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <path d="M16 2C9.9 2 5 6.9 5 13c0 7.7 11 17 11 17s11-9.3 11-17C27 6.9 22.1 2 16 2Z" fill="currentColor"/>
+            <path d="M19.5 7.5c-3 0-3 4.2-6 4.2s-3 4.2 0 4.2 3 4.2 3 4.2" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="2 2.4"/>
+          </svg>
+          <span class="logo-vcv__texto">VoyCon<span class="logo-vcv__acento">Vos</span></span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú de navegación">
           <span class="navbar-toggler-icon"></span>
@@ -437,15 +441,21 @@
   <!-- ============================================================
        PIE DE PÁGINA (semántico: footer)
        ============================================================ -->
-  <footer class="pie-pagina text-white py-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-5">
-          <h2 class="h5 fw-bold"><i class="bi bi-car-front-fill"></i> VoyConVos</h2>
-          <p class="text-white-50">Carpooling solidario hacia la costa argentina. Compartí el camino, los gastos y el viaje.</p>
+  <footer class="pie-pagina text-white">
+    <div class="container pie-pagina__cuerpo">
+      <div class="row gy-4 gx-lg-5">
+        <div class="col-lg-5">
+          <h2 class="h5 fw-bold logo-vcv d-inline-flex align-items-center gap-2">
+            <svg class="logo-vcv__mark" width="24" height="24" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+              <path d="M16 2C9.9 2 5 6.9 5 13c0 7.7 11 17 11 17s11-9.3 11-17C27 6.9 22.1 2 16 2Z" fill="currentColor"/>
+              <path d="M19.5 7.5c-3 0-3 4.2-6 4.2s-3 4.2 0 4.2 3 4.2 3 4.2" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="2 2.4"/>
+            </svg>
+            <span class="logo-vcv__texto">VoyCon<span class="logo-vcv__acento">Vos</span></span>
+          </h2>
+          <p class="text-white-50 mb-0">Carpooling solidario hacia la costa argentina. Compartí el camino, los gastos y el viaje.</p>
         </div>
-        <div class="col-md-3">
-          <h3 class="h6">Navegación</h3>
+        <div class="col-6 col-lg-3">
+          <h3 class="h6 pie-pagina__titulo">Navegación</h3>
           <ul class="list-unstyled pie-pagina__links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#institucional">Institucional</a></li>
@@ -454,18 +464,21 @@
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
-        <div class="col-md-4">
-          <h3 class="h6">Seguinos</h3>
-          <div class="pie-pagina__redes">
-            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-          </div>
+        <div class="col-6 col-lg-4">
+          <h3 class="h6 pie-pagina__titulo">El proyecto</h3>
+          <ul class="list-unstyled pie-pagina__links">
+            <li><a href="https://github.com/BloomDoom/VoyConVos" target="_blank" rel="noopener"><i class="bi bi-github"></i> Repositorio en GitHub</a></li>
+            <li><a href="#contacto"><i class="bi bi-envelope-fill"></i> Sumate a la red</a></li>
+          </ul>
+          <p class="text-white-50 small mb-0 mt-3">Trabajo Final — Diseño y Desarrollo Web</p>
         </div>
       </div>
-      <hr class="border-secondary my-4">
-      <p class="text-center text-white-50 mb-0 small">&copy; 2026 VoyConVos · Trabajo Final — Diseño y Desarrollo Web</p>
+    </div>
+    <div class="pie-pagina__barra">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 text-center">
+        <p class="mb-0 small text-white-50">&copy; 2026 VoyConVos · Carpooling solidario</p>
+        <p class="mb-0 small text-white-50">Hecho por <strong class="logo-vcv__acento">Agustín Espina</strong></p>
+      </div>
     </div>
   </footer>
 

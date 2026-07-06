@@ -19,7 +19,7 @@ y los gastos.
 | 🌐 **Sitio 2 — Multi Page** | <https://bloomdoom.github.io/VoyConVos/sitio2-multipage/> |
 | 🌐 **Sitio 3 — Portfolio** | <https://bloomdoom.github.io/VoyConVos/sitio3-portfolio/> |
 | 💻 **Repositorio (GitHub)** | <https://github.com/BloomDoom/VoyConVos> |
-| 📊 **Landing URL** | <https://app.netlify.com](https://bloomdoom.github.io/VoyConVos)/> |
+| 📊 **Landing URL** | <https://bloomdoom.github.io/VoyConVos)/> |
 | ✉️ **Panel de EmailJS** | <https://dashboard.emailjs.com/> |
 
 > Cada `git push` a la rama `main` redespliega automáticamente los 3 sitios en Netlify.

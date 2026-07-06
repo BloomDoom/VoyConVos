@@ -297,6 +297,12 @@ main { min-height: 60vh; }
 .boton-arriba.visible { opacity: 1; visibility: visible; }
 .boton-arriba:hover { background: var(--color-coral-os); transform: translateY(-3px); }
 
+@media (max-width: 991.98px) {
+  /* En el menú colapsado cada link ocupa toda la fila; sin esto el
+     subrayado activo (::after) se estira a lo ancho del viewport.
+     inline-block ajusta el link (y su subrayado) al ancho del texto. */
+  .barra-navegacion .navbar-nav .nav-link { display: inline-block; }
+}
 @media (max-width: 575px) {
   .encabezado-pagina { padding-top: 6rem; }
   .tarjeta-galeria img { height: 210px; }

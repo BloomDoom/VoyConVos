@@ -316,6 +316,10 @@ section { scroll-margin-top: 70px; }
     background: var(--color-noche);
   }
   .hero-seccion { background-attachment: scroll; }
+  /* En el menú colapsado cada link ocupa toda la fila; sin esto el
+     subrayado activo (::after) se estira a lo ancho del viewport.
+     inline-block ajusta el link (y su subrayado) al ancho del texto. */
+  .barra-navegacion .navbar-nav .nav-link { display: inline-block; }
 }
 @media (max-width: 575px) {
   .hero-seccion .contador { font-size: 1.7rem; }

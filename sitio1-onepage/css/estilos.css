@@ -53,7 +53,6 @@ section { scroll-margin-top: 70px; }
   transition: var(--transicion);
   box-shadow: 0 8px 18px rgba(255, 122, 89, .35);
 }
-.btn--cta:hover,
 .btn--cta:focus {
   background: var(--color-coral-os);
   color: #fff;
